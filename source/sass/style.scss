@@ -2,6 +2,7 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+
 // Swiper 7.4.1
 // @import "vendor/swiper";
 
@@ -19,60 +20,40 @@
 // ---------------------------------
 
 @import "blocks/btn";
+@import "blocks/title";
 @import "blocks/modal";
 @import "blocks/custom-input";
-@import "blocks/custom-toggle";
-@import "blocks/custom-select";
+@import "blocks/logo";
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/social";
+@import "blocks/source";
+@import "blocks/hero";
+@import "blocks/tabs/data-tabs";
+@import "blocks/tabs/tabs";
+@import "blocks/accordion/accordion";
+@import "blocks/accordion/data-accordion";
+@import "blocks/swiper/swiper-slide";
+@import "blocks/swiper/swiper";
+@import "blocks/swiper/swiper-button-next";
+@import "blocks/swiper/swiper-button-prev";
+@import "blocks/toggle-group";
+
+// Screens
+// -----------------------------
+
+@import "blocks/screens/main";
+@import "blocks/screens/gym";
+@import "blocks/screens/season-tickets";
+@import "blocks/screens/super-games-and-trainers/super-games-and-trainers";
+@import "blocks/screens/super-games-and-trainers/super-games";
+@import "blocks/screens/super-games-and-trainers/trainers";
+@import "blocks/screens/advantages";
+@import "blocks/screens/stocks";
+@import "blocks/screens/questions-and-answers";
+@import "blocks/screens/reviews";
+@import "blocks/screens/free-lesson-and-contacts/free-lesson-and-contacts";
+@import "blocks/screens/free-lesson-and-contacts/free-lesson";
+@import "blocks/screens/free-lesson-and-contacts/contacts";
 
 // ---------------------------------
-
-// ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg
-
-// ❗ обязательно используйте mixin hover-focus для отключения ховеров на тач устройствах
-/* @mixin hover-focus {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
-
-    &.focus-visible:focus {
-      @content;
-    }
-  }
-*/
-/*  @include hover-focus {
-      opacity: 0.8;
-    }
-*/
-// но не используем для текстовых полей ( input, textarea )
-// так же в сборке есть отдельный миксин для hover
-/*@mixin hover {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
-  }
-*/
-// для focus
-/*@mixin focus {
-    &.focus-visible:focus {
-      @content;
-    }
-  }
-*/
-// и для active
-/*@mixin active {
-    &.focus-visible:active {
-      @content;
-    }
-  }
-*/
-// адаптив пишем внутри каждого класса (смотрим container.scss)
-
-// для фикса проблем с vh на iOS в сборке подключен скрипт
-// используя vh на проекте задавайте их также как в примере в utils.scss
-
-// для любых transition обязательно указывайте transition-property
-// transition: $trans-default ❌ ---> transition: color $trans-default ✅

@@ -1,17 +1,22 @@
 .btn {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 20px;
-
-  color: $color-default-white;
-
-  background-color: $color-neon-blue;
+  background-color: transparent;
+  color: $color-default-sapphire;
   border: none;
   cursor: pointer;
-
+  font-family: $ff-roboto-bold;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
+  &:focus-visible {
+    outline: none;
   }
 
   &:disabled {

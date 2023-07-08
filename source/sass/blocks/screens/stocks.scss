@@ -1,0 +1,209 @@
+.stocks {
+  padding: 147px 0 120px;
+
+  @include vp-1199 {
+    padding: 90px 0 100px;
+  }
+
+  @include vp-767 {
+    padding: 64px 0 70px;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.stocks__title {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 34px;
+
+  @include vp-1199 {
+    margin-bottom: 42px;
+  }
+}
+
+.stocks__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: $ff-roboto-bold;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  border-bottom: 1px solid $color-default-sapphire;
+  margin-top: auto;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    width: 90px;
+    outline: none;
+    padding: 10px;
+    border: 1px solid $color-default-sapphire;
+    margin-bottom: -10px;
+    margin-left: -10px;
+  }
+}
+
+.stocks__info-and-image {
+  display: flex;
+
+  @include vp-1199 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  @include vp-550 {
+    flex-wrap: wrap;
+
+    img {
+      height: 299px;
+      width: 100vw;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    @include retina {
+      img {
+        height: 299px;
+        object-fit: cover;
+        object-position: center top;
+      }
+    }
+  }
+}
+
+.stocks__info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 280px;
+  padding: 45px;
+  color: $color-default-white;
+  background-color: $color-torch-red;
+
+  @include vp-1199 {
+    width: 41.15%;
+  }
+
+  @include vp-550 {
+    width: 100%;
+    min-height: 299px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.stocks__info-title {
+  font-size: 28px;
+  font-family: $ff-roboto-bold;
+  font-weight: 700;
+  line-height: 22px;
+  margin: 0 0 15px;
+}
+
+.stocks__info-value {
+  font-size: 70px;
+  font-family: $ff-roboto-bold;
+  font-weight: 700;
+  line-height: 50px;
+}
+
+.stocks__info-text {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 30px 0 0;
+
+  @include vp-767 {
+    margin-top: 24px;
+  }
+}
+
+.stocks__info-link {
+  width: 79px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.7px;
+  color: $color-default-white;
+  border-color: $color-default-white;
+
+  &:focus-visible {
+    width: 99px;
+    border: 1px solid $color-default-white;
+  }
+}
+
+.stocks__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 560px;
+  margin: 0;
+  padding: 0;
+
+  @include vp-1199 {
+    flex-direction: row;
+    gap: 30px;
+    width: 100%;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.stocks__item {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  min-height: 211px;
+  outline: 0;
+  border: 7px solid transparent;
+  border-image: $cobalt-tabs-to-bottom 1;
+
+  @include vp-1199 {
+    width: 47.79%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 39px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.stocks__item-title {
+  font-size: 26px;
+  line-height: 20px;
+  margin: 0 0 10px;
+  font-family: $ff-roboto-bold;
+  font-weight: 700;
+
+  @include vp-767 {
+    margin-bottom: 12px;
+  }
+}
+
+.stocks__item-text {
+  margin: 0;
+
+  &--free br {
+    display: none;
+  }
+
+  @include vp-1199 {
+    &--free br {
+      display: block;
+    }
+  }
+}

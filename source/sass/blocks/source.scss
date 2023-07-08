@@ -1,0 +1,86 @@
+.source {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-left: 8px;
+  padding: 0;
+  min-width: 37.16%;
+
+  @include vp-1199 {
+    min-width: 57.67%;
+    margin-left: 16px;
+  }
+
+  @include vp-767 {
+    display: grid;
+    grid-template-columns: 55% 50%;
+    margin-top: -21px;
+    margin-left: 0;
+    margin-bottom: 18px;
+  }
+}
+
+.source__item {
+  list-style-type: none;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+
+    @include vp-1199 {
+      margin-right: 10px;
+    }
+  }
+
+  @include vp-767 {
+    margin-bottom: 16px;
+
+    &--stocks,
+    &--trainers,
+    &--schedule {
+      grid-column: 2/3;
+    }
+
+    &--stocks {
+      grid-row-start: 1;
+    }
+
+    &--services {
+      grid-row-start: 2;
+    }
+
+    &--ticket {
+      grid-row-start: 3;
+    }
+  }
+}
+
+.source__link {
+  padding: 5px 10px;
+  color: $color-default-white;
+  font-size: 14px;
+
+  &:hover {
+    border-bottom: 1px solid $color-default-white;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border: 1px solid $color-default-white;
+    padding-right: 9px;
+    padding-left: 9px;
+  }
+
+  &--disabled {
+    opacity: 0.4;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    padding-left: 0;
+
+    &:focus-visible {
+      margin-left: -1px;
+      padding-left: 0;
+    }
+  }
+}

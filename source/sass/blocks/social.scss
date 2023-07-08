@@ -1,0 +1,45 @@
+.social {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.social__item {
+  list-style-type: none;
+
+  &:not(:last-child) {
+    margin-right: 11px;
+  }
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  background-color: $color-default-white;
+  border-radius: 50px;
+
+  svg {
+    fill: $color-black-russian;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-egyptian-blue;
+    outline: none;
+
+    svg {
+      fill: $color-default-white;
+    }
+  }
+
+  &:active {
+    background-color: $color-default-sapphire;
+  }
+
+  &--disabled {
+    opacity: 0.3;
+  }
+}

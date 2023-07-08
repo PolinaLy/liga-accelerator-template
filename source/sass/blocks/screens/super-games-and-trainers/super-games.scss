@@ -1,0 +1,158 @@
+.super-games {
+  display: flex;
+
+  @include vp-1199 {
+    justify-content: center;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.super-games__info {
+  background-color: $color-torch-red;
+  color: $color-default-white;
+  width: 500px;
+  min-height: 500px;
+  padding: 87px 78px;
+  display: grid;
+  grid-template-columns: 73.26% 8.1% 11.1% 7.54%;
+  grid-template-rows: 7.7% 7.36% 6.13% 15.34% 12.88% 14.72% 35.87%;
+
+  p {
+    margin: auto 0 0;
+  }
+
+  @include vp-1199 {
+    width: 43.07%;
+    min-height: 292px;
+    padding: 51px 45px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 51px 44px 49px;
+  }
+}
+
+.super-games__title {
+  font-size: 82px;
+  font-family: $ff-alumni-sans;
+  font-weight: 600;
+  line-height: 96%;
+  letter-spacing: 2.46px;
+  margin: 0 0 0 14px;
+  grid-column: 1/2;
+  grid-row: 1/6;
+
+  @include vp-1199 {
+    margin-left: 8px;
+    font-size: 48px;
+    letter-spacing: 1.44px;
+  }
+}
+
+.super-games__date {
+  display: block;
+  font-size: 18px;
+  grid-column: 2/4;
+  grid-row: 1/2;
+  border-bottom: 1px solid $color-default-white;
+  margin-top: -6px;
+
+  &--time {
+    grid-column: 2/5;
+    grid-row: 4/5;
+    margin-top: auto;
+  }
+
+  &--description {
+    grid-column: 1/5;
+    grid-row: 6/7;
+    border: none;
+    margin-top: auto;
+  }
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.super-games__text {
+  font-size: 14px;
+  margin: 3px 0 0 -2px;
+  grid-column: 3/4;
+  grid-row: 2/3;
+
+  &--year {
+    grid-row: 3/4;
+  }
+
+  @include vp-1199 {
+    font-size: 10px;
+    line-height: 16px;
+  }
+}
+
+.super-games__value {
+  font-size: 40px;
+  line-height: 30px;
+  grid-column: 2/3;
+  grid-row: 2/4;
+  display: flex;
+  align-self: center;
+  margin: 0;
+
+  &--time {
+    grid-column: 2/5;
+    grid-row: 5/6;
+  }
+
+  @include vp-1199 {
+    font-size: 24px;
+  }
+}
+
+.super-games__link {
+  grid-column: 1/5;
+  grid-row: 7/8;
+  min-height: 67px;
+  margin-top: auto;
+  color: $color-default-white;
+  border: 4px solid $color-default-white;
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    opacity: 0.7;
+  }
+
+  @include vp-1199 {
+    font-size: 10px;
+    letter-spacing: 0.5;
+    min-height: 39px;
+    border-width: 2px;
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+}
+
+.super-games__image-wrapper {
+  @include vp-1199 {
+    width: 56.93%;
+
+    img {
+      width: 100%;
+      height: 292px;
+      object-fit: cover;
+    }
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}

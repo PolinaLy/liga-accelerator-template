@@ -1,0 +1,136 @@
+.swiper-slide {
+  position: relative;
+
+  img {
+    width: 100%;
+
+    @include vp-1199 {
+      width: 268px;
+      height: 294px;
+      object-fit: cover;
+    }
+
+    @include vp-767 {
+      width: 226px;
+      height: 274px;
+    }
+  }
+
+  @include vp-1199 {
+    display: grid;
+    justify-content: center;
+  }
+
+  &:focus-visible {
+    outline: 2px solid;
+
+    .swiper-slide__info {
+      background-color: $color-default-sapphire;
+      opacity: 0.89;
+
+      .swiper-slide__sub-info {
+        display: block;
+      }
+
+      .swiper-slide__title {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.swiper-slide__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 53px 40px 24px;
+
+  @include hover-focus {
+    background-color: $color-default-sapphire;
+    opacity: 0.89;
+
+    .swiper-slide__sub-info {
+      display: block;
+    }
+
+    .swiper-slide__title {
+      margin: 0;
+    }
+  }
+
+  @include vp-1199 {
+    padding: 44px 19px 20px;
+    width: 226px;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+
+    @include active {
+      background-color: $color-default-sapphire;
+      opacity: 0.89;
+
+      .swiper-slide__sub-info {
+        display: block;
+      }
+
+      .swiper-slide__title {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.swiper-slide__title {
+  color: $color-default-white;
+  font-size: 18px;
+  font-family: $ff-roboto-bold;
+  font-weight: 700;
+  line-height: 21px;
+  margin: auto 0 0;
+}
+
+.swiper-slide__sub-info {
+  display: none;
+  color: $color-default-white;
+  text-align: center;
+}
+
+.swiper-slide__specialization {
+  display: block;
+  color: #b6bdcc;
+  font-size: 16px;
+  margin: 0 0 32px;
+}
+
+.swiper-slide__list {
+  font-size: 14px;
+  padding-left: 15px;
+  text-align: start;
+}
+
+.swiper-slide__item {
+  padding-left: 16px;
+  position: relative;
+  list-style-type: none;
+  line-height: 20px;
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $color-default-white;
+  }
+}

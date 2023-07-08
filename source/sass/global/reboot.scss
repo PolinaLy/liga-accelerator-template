@@ -16,8 +16,8 @@ html {
   font-weight: 400;
   font-size: $fz-default;
   line-height: 24px;
-  font-family: $ff-placeholder;
-  color: $color-default-black;
+  font-family: $ff-roboto-regular;
+  color: $color-default-sapphire;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,12 +30,14 @@ html {
 body {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 
   background-color: $color-default-white;
 }
 
 a {
-  color: $color-default-black;
+  color: $color-default-sapphire;
   text-decoration: none;
 }
 
@@ -59,7 +61,7 @@ textarea {
 input:-webkit-autofill {
   box-shadow: inset 0 0 0 1000px $color-default-white;
 
-  -webkit-text-fill-color: $color-default-black;
+  -webkit-text-fill-color: $color-default-sapphire;
 }
 
 // firefox placeholder \ invalid fix + ios bdrs
@@ -126,4 +128,21 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+
+:root {
+  --swiper-navigation-size: 32px;
+  --swiper-theme-color: $color-default-sapphire;
+}
+
+@include vp-767 {
+  :root {
+    --swiper-navigation-size: 19px;
+    --swiper-theme-color: $color-default-sapphire;
+  }
 }

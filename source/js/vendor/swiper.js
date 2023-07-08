@@ -1,3 +1,49 @@
+const mediaQuery = window.matchMedia('(max-width: 1199px)');
+const swiperSlideInfo = document.querySelectorAll('.swiper-slide__info');
+
+if (mediaQuery.matches) {
+  swiperSlideInfo.forEach(el => {
+    el.classList.add('focus-visible');
+  })
+} else {
+  swiperSlideInfo.forEach(el => {
+    el.classList.remove('focus-visible');
+  })
+}
+
+new Swiper('.swiper', {
+  loop: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      initialSlide: 2,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      initialSlide: 2,
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+new Swiper('.swiper-reviews', {
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
 const swiper = () => {
   /**
    * Swiper 7.4.1

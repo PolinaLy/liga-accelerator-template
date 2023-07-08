@@ -1,0 +1,8 @@
+.free-lesson-and-contacts {
+  display: flex;
+  border-top: 1px solid #74819c;
+
+  @include vp-1199 {
+    flex-direction: column;
+  }
+}
