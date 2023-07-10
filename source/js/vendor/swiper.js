@@ -1,5 +1,6 @@
 const mediaQuery = window.matchMedia('(max-width: 1199px)');
 const swiperSlideInfo = document.querySelectorAll('.swiper-slide__info');
+const swiperSlide = document.querySelectorAll('.swiper-slide');
 
 if (mediaQuery.matches) {
   swiperSlideInfo.forEach(el => {
@@ -37,7 +38,6 @@ new Swiper('.swiper', {
 });
 
 new Swiper('.swiper-reviews', {
-
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',

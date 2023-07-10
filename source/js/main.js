@@ -5,9 +5,6 @@ import './modules/video';
 import './modules/tabs/index';
 import './modules/tabs/init-tabs';
 import './modules/tabs/tabs';
-import './modules/accordion/accordions';
-import './modules/accordion/index';
-import './modules/accordion/init-accordion';
 import './modules/scroll-link';
 
 // ---------------------------------

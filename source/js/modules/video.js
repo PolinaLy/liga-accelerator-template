@@ -1,4 +1,4 @@
-let video = document.querySelector('.gym__video');
+let video = document.querySelector('video');
 let buttonPlay = document.querySelector('.gym__video-button');
 
 buttonPlay.addEventListener('click', () => {

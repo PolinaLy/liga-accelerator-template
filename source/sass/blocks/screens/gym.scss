@@ -11,6 +11,22 @@
     flex-direction: column;
     padding: 64px 0 70px;
   }
+
+  video {
+    position: relative;
+    height: 228px;
+
+    @include vp-1199 {
+      width: 100%;
+      height: auto;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      height: 167px;
+      object-fit: cover;
+    }
+  }
 }
 
 .gym .container {
@@ -117,21 +133,6 @@
   @include vp-767 {
     width: 100%;
     margin: 40px 0 0;
-  }
-}
-
-.gym__video {
-  position: relative;
-
-  @include vp-1199 {
-    width: 100%;
-    height: auto;
-  }
-
-  @include vp-767 {
-    width: 100%;
-    height: 167px;
-    object-fit: cover;
   }
 }
 
