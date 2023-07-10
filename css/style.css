@@ -415,7 +415,7 @@ template {
   font-weight: 600;
   font-family: "Alumni Sans";
   font-display: swap;
-  src: url("../../fonts/AlumniSans-SemiBold.woff2") format("woff2"), url("../../fonts/AlumniSans-SemiBold.woff") format("woff");
+  src: url("../fonts/AlumniSans-SemiBold.woff2") format("woff2"), url("../fonts/AlumniSans-SemiBold.woff") format("woff");
 }
 
 @font-face {
@@ -423,7 +423,7 @@ template {
   font-weight: 800;
   font-family: "Alumni Sans";
   font-display: swap;
-  src: url("../../fonts/AlumniSansExtraBold.woff2") format("woff2"), url("../../fonts/AlumniSansExtraBold.woff") format("woff");
+  src: url("../fonts/AlumniSansExtraBold.woff2") format("woff2"), url("../fonts/AlumniSansExtraBold.woff") format("woff");
 }
 
 *,
@@ -1187,14 +1187,16 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  min-width: 341px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 341px;
   margin: 0 auto 39px;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
 }
 
 .tabs__control {
+  position: relative;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1206,31 +1208,15 @@ button,
   -ms-flex-pack: center;
   justify-content: center;
   opacity: 0.5;
-  min-width: auto;
   font-size: 20px;
   padding: 19px 0 15px;
   background: transparent;
   border: none;
-  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
   text-transform: lowercase;
-}
-
-.tabs__control--six-mounth {
-  min-width: 176px;
-}
-
-.tabs__control.is-active,
-.tabs__control:hover,
-.tabs__control:focus-visible {
-  outline: none;
-  opacity: 1;
-  pointer-events: none;
-  border-color: rgb(209, 10, 66);
 }
 
 .tabs__control:disabled {
   opacity: 0.7;
-  border: none;
 }
 
 .tabs__content {
@@ -1350,13 +1336,62 @@ button,
 
 .accordion__element {
   border-bottom: 1px solid rgba(28, 51, 116, 0.2);
-  padding: 33px 0 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+
+.accordion__element summary {
+  position: relative;
+  padding: 33px 0 21px;
+}
+
+.accordion__element summary::marker {
+  content: "";
+}
+
+.accordion__element summary::before {
+  position: absolute;
+  content: "";
+  width: 42px;
+  height: 42px;
+  background-color: transparent;
+  border: 1px solid #102654;
+  top: 25px;
+  right: 0;
+  border-radius: 50%;
+}
+
+.accordion__element summary::after,
+.accordion__element .plus {
+  position: absolute;
+  content: "";
+  width: 17px;
+  height: 1px;
+  top: 45px;
+  right: 12px;
+  background-color: #102654;
+}
+
+.accordion__element .plus {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.accordion__element[open] .plus {
+  display: none;
+}
+
+.accordion__element[open] summary::after {
+  background-color: #ffffff;
+}
+
+.accordion__element[open] summary::before {
+  background-color: #102654;
 }
 
 .accordion__element:first-child {
@@ -1368,31 +1403,16 @@ button,
   font-size: 18px;
   font-family: "Roboto Light", "Arial", sans-serif;
   font-weight: 300;
-  line-height: 22px;
-  margin: 14px 0 0;
+  line-height: 26px;
+  margin: -9px 0 23px;
 }
 
-.accordion__element--season-ticket {
-  padding-bottom: 15px;
-}
-
-.accordion__element--limit {
-  padding: 43px 0 24px;
-}
-
-.accordion__element.is-active .accordion__button {
-  background-color: #102654;
-}
-
-.accordion__element.is-active .accordion__button::after {
-  background-color: #ffffff;
-}
-
-.accordion__element.is-active .accordion__button::before {
-  display: none;
+.accordion__element--limit summary {
+  padding: 44px 0 28px;
 }
 
 .accordion__title {
+  position: relative;
   font-size: 24px;
   font-weight: 500;
   line-height: 28px;
@@ -1401,37 +1421,6 @@ button,
 
 .accordion__title br {
   display: none;
-}
-
-.accordion__button {
-  position: relative;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background-color: transparent;
-  border: 1px solid #102654;
-  margin-left: auto;
-  margin-top: -8px;
-}
-
-.accordion__button::after,
-.accordion__button::before {
-  position: absolute;
-  content: "";
-  width: 17px;
-  height: 1px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  background-color: #102654;
-}
-
-.accordion__button::before {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
 }
 
 [data-accordion=element].is-active > [data-accordion=content] {
@@ -1669,6 +1658,11 @@ button,
   padding: 120px 0;
 }
 
+.gym video {
+  position: relative;
+  height: 228px;
+}
+
 .gym .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1713,10 +1707,6 @@ button,
   width: 364px;
   margin-top: -113px;
   margin-left: -63px;
-}
-
-.gym__video {
-  position: relative;
 }
 
 .gym__video-button {
@@ -1792,6 +1782,14 @@ button,
   position: absolute;
   right: 0;
   bottom: -149px;
+}
+
+.season-tickets .tabs__control.is-active,
+.season-tickets .tabs__control:hover,
+.season-tickets .tabs__control:focus-visible {
+  outline: none;
+  opacity: 1;
+  border-bottom: 2px solid #d10a42;
 }
 
 .season-tickets__wrapper {
@@ -1967,8 +1965,6 @@ button,
   display: grid;
   -ms-grid-columns: 340px 240px 340px;
   grid-template-columns: 340px 240px 340px;
-  -ms-grid-rows: 156px 72px;
-  grid-template-rows: 156px 72px;
   -webkit-column-gap: 60px;
   -moz-column-gap: 60px;
   column-gap: 60px;
@@ -1991,17 +1987,23 @@ button,
   -webkit-column-gap: 30px;
   -moz-column-gap: 30px;
   column-gap: 30px;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  border-bottom: 2px solid rgba(209, 10, 66, 0.2);
+  padding-bottom: 77px;
 }
 
-.advantages__item--square {
-  padding-left: 19px;
+.advantages__item:nth-child(2n) {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
-  border-bottom: 2px solid rgba(209, 10, 66, 0.2);
+  padding-left: 19px;
+}
+
+.advantages__item:nth-last-child(-n+2) {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .advantages__item--square .advantages__item-text,
@@ -2009,37 +2011,12 @@ button,
   margin-left: -48px;
 }
 
-.advantages__item--parking {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3/4;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
-  border-bottom: 2px solid rgba(209, 10, 66, 0.2);
-}
-
-.advantages__item--comfort {
-  padding-left: 19px;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
+.advantages__item--parking .advantages__item-text {
+  padding-right: 5px;
 }
 
 .advantages__item--comfort br {
   display: none;
-}
-
-.advantages__item--experience {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3/4;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
 }
 
 .advantages__item--simulators {
@@ -2055,9 +2032,7 @@ button,
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1/3;
+  grid-row: 1/-3;
   background-color: #1c3374;
   color: #ffffff;
 }
@@ -2318,23 +2293,24 @@ button,
 }
 
 .questions-and-answers .tabs__controls {
-  min-width: 260px;
+  width: 260px;
+  min-height: 246px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
   margin: 0;
+  border: none;
 }
 
 .questions-and-answers .tabs__control {
-  padding-bottom: 14px;
+  padding: 17px 0 14px;
   font-size: 18px;
   line-height: 21px;
   font-weight: 500px;
   text-transform: inherit;
   opacity: 1;
   border: 1px solid rgba(16, 38, 84, 0.2);
-  margin-bottom: 10px;
 }
 
 .questions-and-answers .tabs__control:hover,
@@ -2352,7 +2328,7 @@ button,
   pointer-events: none;
   background: -webkit-gradient(linear, left top, right top, from(rgb(237, 2, 51)), to(rgb(0, 62, 183)));
   background: linear-gradient(90deg, rgb(237, 2, 51) 0%, rgb(0, 62, 183) 100%);
-  border: none;
+  border-color: transparent;
 }
 
 .questions-and-answers .tabs__content {
@@ -2370,7 +2346,7 @@ button,
 }
 
 .reviews .swiper-reviews {
-  width: 56.08vw;
+  width: 56.02vw;
 }
 
 .reviews .swiper-slide {
@@ -2382,8 +2358,7 @@ button,
   justify-content: space-between;
   background-color: #1c3374;
   padding: 59px 62px 57px;
-  -webkit-box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
-  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+  margin-top: 2px;
 }
 
 .reviews .swiper-slide img {
@@ -2707,10 +2682,6 @@ button,
     margin-bottom: 44px;
   }
 
-  .tabs__control--six-mounth {
-    min-width: 186px;
-  }
-
   .tabs__control {
     font-size: 18px;
   }
@@ -2728,30 +2699,34 @@ button,
     row-gap: 40px;
   }
 
-  .accordion__element {
-    padding-bottom: 26px;
+  .accordion__element summary {
+    padding-bottom: 25px;
   }
 
-  .accordion__element--schedule {
-    padding-bottom: 24px;
+  .accordion__element--schedule summary {
+    padding-bottom: 28px;
   }
 
-  .accordion__element--trainers {
-    padding-top: 25px;
+  .accordion__element--coolers summary {
+    padding-bottom: 30px;
   }
 
-  .accordion__element--trainers .accordion__title {
+  .accordion__element--trainers summary {
+    padding-top: 27px;
+    padding-bottom: 54px;
+  }
+
+  .accordion__element--trainers summary .accordion__title {
     padding-right: 62px;
   }
 
-  .accordion__element--trainers .accordion__button {
+  .accordion__element--trainers summary .accordion__button {
     margin-top: 5px;
   }
 
   .accordion__element p {
     padding-right: 156px;
     line-height: 25px;
-    margin-top: 6px;
   }
 
   .accordion__title {
@@ -2819,6 +2794,11 @@ button,
     padding: 100px 0;
   }
 
+  .gym video {
+    width: 100%;
+    height: auto;
+  }
+
   .gym .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2855,11 +2835,6 @@ button,
     width: 39.23%;
     margin: 0 auto;
     margin-top: -84px;
-  }
-
-  .gym__video {
-    width: 100%;
-    height: auto;
   }
 
   .gym__video-button {
@@ -2983,8 +2958,7 @@ button,
     padding: 0 45px;
   }
 
-  .advantages__item--square {
-    border-bottom: none;
+  .advantages__item:nth-child(2n) {
     padding-left: 0;
   }
 
@@ -3001,14 +2975,10 @@ button,
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2/3;
-    border-bottom: none;
     margin-right: 4px;
   }
 
   .advantages__item--comfort {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    grid-row: 3/4;
     padding-left: 0;
   }
 
@@ -3016,9 +2986,6 @@ button,
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2/3;
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    grid-row: 3/4;
   }
 
   .advantages__item--simulators .advantages__item-unit {
@@ -3038,6 +3005,10 @@ button,
     -ms-grid-column-align: center;
     justify-self: center;
     padding: 48px 115px 40px;
+  }
+
+  .advantages__item {
+    border-bottom: none;
   }
 
   .advantages__item-title {
@@ -3105,6 +3076,7 @@ button,
 
   .questions-and-answers .tabs__controls {
     width: 100%;
+    min-height: 54px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
@@ -3117,7 +3089,6 @@ button,
 
   .questions-and-answers .tabs__control {
     min-width: 162px;
-    margin-bottom: 0;
   }
 
   .questions-and-answers .tabs__content {
@@ -3136,6 +3107,10 @@ button,
 
   .reviews .swiper-reviews {
     width: 100vw;
+  }
+
+  .reviews .swiper__button {
+    top: 17px;
   }
 
   .reviews .swiper-slide__info-reviews {
@@ -3390,15 +3365,6 @@ button,
     margin-bottom: 35px;
   }
 
-  .tabs__control--one-mounth {
-    padding-right: 9px;
-  }
-
-  .tabs__control--six-mounth {
-    min-width: 150px;
-    padding-right: 13px;
-  }
-
   .tabs__control {
     font-size: 16px;
   }
@@ -3441,7 +3407,20 @@ button,
     margin-left: 5px;
   }
 
-  .accordion__element {
+  .accordion__element summary::before {
+    width: 32px;
+    height: 32px;
+    top: 35px;
+  }
+
+  .accordion__element summary::after,
+  .accordion__element .plus {
+    width: 12px;
+    top: 51px;
+    right: 10px;
+  }
+
+  .accordion__element summary {
     padding: 20px 0 22px;
   }
 
@@ -3449,28 +3428,29 @@ button,
     padding-right: 0;
   }
 
+  .accordion__element--center summary::before,
+  .accordion__element--child summary::before {
+    top: 25px;
+  }
+
+  .accordion__element--center summary::after,
+  .accordion__element--center summary .plus,
+  .accordion__element--child summary::after,
+  .accordion__element--child summary .plus {
+    top: 41px;
+  }
+
   .accordion__element p {
     font-size: 16px;
     line-height: 21px;
     padding: 0;
-    margin-top: 16px;
+    margin-bottom: 26px;
   }
 
   .accordion__title {
     font-size: 18px;
     line-height: 21px;
     max-width: 82.07%;
-  }
-
-  .accordion__button {
-    width: 32px;
-    height: 32px;
-    margin: auto 0 auto auto;
-  }
-
-  .accordion__button::after,
-  .accordion__button::before {
-    width: 12px;
   }
 
   .swiper-slide img {
@@ -3510,6 +3490,13 @@ button,
     padding: 64px 0 70px;
   }
 
+  .gym video {
+    width: 100%;
+    height: 167px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
   .gym .container {
     padding: 0;
   }
@@ -3538,15 +3525,13 @@ button,
     margin: 40px 0 0;
   }
 
-  .gym__video {
-    width: 100%;
-    height: 167px;
-    -o-object-fit: cover;
-    object-fit: cover;
-  }
-
   .season-tickets img {
     display: none;
+  }
+
+  .season-tickets .tabs__controls {
+    min-width: 290px;
+    width: 90px;
   }
 
   .season-tickets__wrapper {
@@ -3590,9 +3575,36 @@ button,
   }
 
   .advantages__list {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     text-align: center;
+    row-gap: 0;
     padding: 0;
+  }
+
+  .advantages__item:nth-child(2n) {
+    padding-left: 45px;
+  }
+
+  .advantages__item--square {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+  }
+
+  .advantages__item--parking {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+  }
+
+  .advantages__item--parking .advantages__item-text {
+    padding-right: 0;
   }
 
   .advantages__item--simulators .advantages__item-unit {
@@ -3653,7 +3665,7 @@ button,
   }
 
   .questions-and-answers {
-    padding: 70px 0;
+    padding: 68px 0 70px;
   }
 
   .questions-and-answers .tabs__controls {
@@ -3679,7 +3691,11 @@ button,
   }
 
   .reviews {
-    padding: 89px 0 70px;
+    padding: 87px 0 70px;
+  }
+
+  .reviews .swiper__button {
+    top: 10px;
   }
 
   .reviews .swiper-slide img {
