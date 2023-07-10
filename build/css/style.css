@@ -2337,6 +2337,7 @@ button,
   outline: none;
   opacity: 1;
   border-bottom: 2px solid #d10a42;
+  padding-bottom: 13px;
 }
 @media (max-width: 767px) {
   .season-tickets .tabs__controls {
