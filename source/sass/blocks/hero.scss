@@ -2,33 +2,78 @@
   padding: 142px 764px 94px 0;
   color: $color-default-white;
 
+  h2 {
+    width: 250px;
+    font-size: 92px;
+    line-height: 110px;
+    font-weight: 800;
+    letter-spacing: 4.6px;
+    text-transform: uppercase;
+    margin: 0;
+
+    @include vp-1199 {
+      width: 63.8%;
+      font-size: 77px;
+      line-height: 86px;
+      letter-spacing: 0;
+      text-transform: initial;
+      margin-right: 3px;
+    }
+
+    @include vp-767 {
+      margin-left: -45px;
+      width: auto;
+    }
+  }
+
+  p {
+    font-size: 48px;
+    line-height: 37px;
+    font-weight: 600;
+    letter-spacing: 1.44px;
+    margin: 0 51px 25px 0;
+
+    @include vp-1199 {
+      font-size: 34px;
+      line-height: 25px;
+      margin: 0 4px 15px 0;
+      letter-spacing: 1.02px;
+    }
+
+    @include vp-767 {
+      font-size: 28px;
+      letter-spacing: 0.84px;
+      margin: 0 3px 18px 0;
+    }
+  }
+
+  img {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    right: 200px;
+    width: 500px;
+    height: 556px;
+
+    @include vp-1199 {
+      width: 324px;
+      height: 390px;
+      right: 0;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
   @include vp-1199 {
     padding: 99px 354px 105px 0;
   }
 
   @include vp-767 {
     padding: 97px 0 80px;
-  }
-}
-
-.hero__text-city {
-  font-size: 48px;
-  line-height: 37px;
-  font-weight: 600;
-  letter-spacing: 1.44px;
-  margin: 0 51px 25px 0;
-
-  @include vp-1199 {
-    font-size: 34px;
-    line-height: 25px;
-    margin: 0 4px 15px 0;
-    letter-spacing: 1.02px;
-  }
-
-  @include vp-767 {
-    font-size: 28px;
-    letter-spacing: 0.84px;
-    margin: 0 3px 18px 0;
   }
 }
 
@@ -46,51 +91,6 @@
     display: grid;
     grid-template-columns: auto auto;
     min-height: 172px;
-  }
-}
-
-.hero img {
-  position: absolute;
-  content: "";
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
-  right: 200px;
-  width: 500px;
-  height: 556px;
-
-  @include vp-1199 {
-    width: 324px;
-    height: 390px;
-    right: 0;
-  }
-
-  @include vp-767 {
-    display: none;
-  }
-}
-
-.hero__title {
-  width: 250px;
-  font-size: 92px;
-  line-height: 110px;
-  font-weight: 800;
-  letter-spacing: 4.6px;
-  text-transform: uppercase;
-  margin: 0;
-
-  @include vp-1199 {
-    width: 63.8%;
-    font-size: 77px;
-    line-height: 86px;
-    letter-spacing: 0;
-    text-transform: initial;
-    margin-right: 3px;
-  }
-
-  @include vp-767 {
-    margin-left: -45px;
-    width: auto;
   }
 }
 

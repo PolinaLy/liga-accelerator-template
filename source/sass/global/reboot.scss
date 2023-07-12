@@ -25,6 +25,7 @@ html {
   text-rendering: optimizeLegibility;
   // если по прежнему есть проблемы с выравниванием
   // https://transfonter.org/ - включите настройку https://prnt.sc/12rnt6g и переконвертируйте шрифт
+  scroll-behavior: smooth;
 }
 
 body {
@@ -34,6 +35,24 @@ body {
   flex-direction: column;
 
   background-color: $color-default-white;
+
+  h2 {
+    font-size: 54px;
+    font-family: $ff-alumni-sans;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.62px;
+
+    @include vp-1199 {
+      font-size: 42px;
+      letter-spacing: 1.26px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      letter-spacing: 0.96px;
+    }
+  }
 }
 
 a {

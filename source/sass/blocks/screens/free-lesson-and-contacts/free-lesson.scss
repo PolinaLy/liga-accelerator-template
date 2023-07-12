@@ -4,6 +4,22 @@
   background-color: $color-default-sapphire;
   padding: 66px 0 67px 7.54%;
 
+  h2 {
+    margin: 0 0 19px;
+    letter-spacing: 2.3px;
+
+    @include vp-1199 {
+      letter-spacing: 1.6px;
+      width: 65.46%;
+      margin: 0 auto 25px;
+    }
+
+    @include vp-767 {
+      letter-spacing: 0.96px;
+      width: 90.63%;
+    }
+  }
+
   .btn {
     width: 410px;
     padding: 20px;
@@ -99,21 +115,5 @@
       width: 90.63%;
       margin: 0 auto;
     }
-  }
-}
-
-.free-lesson__title {
-  margin: 0 0 19px;
-  letter-spacing: 2.3px;
-
-  @include vp-1199 {
-    letter-spacing: 1.6px;
-    width: 65.46%;
-    margin: 0 auto 25px;
-  }
-
-  @include vp-767 {
-    letter-spacing: 0.96px;
-    width: 90.63%;
   }
 }

@@ -19,7 +19,7 @@
       <a href="index.html" class="logo">
         <img src="./img/svg/logo.svg" width="122" height="44" alt="Логотип SUPERGYM.">
       </a>
-      <a class="header__tel" href="tel:8-800-555-55-55">8-800-555-55-55</a>
+      <a class="header__tel" href="tel:+78005555555">8-800-555-55-55</a>
     </header>
 
     <main>
@@ -27,14 +27,14 @@
         <div class="container">
           <div class="main__wrapper">
             <div class="hero">
-              <p class="hero__text-city">омск</p>
+              <p>омск</p>
               <div class="hero__wrapper">
                 <ul class="hero__list">
                   <li class="hero__item">Тренажёрный зал</li>
                   <li class="hero__item">Групповые занятия</li>
                   <li class="hero__item">Кардио-зона</li>
                 </ul>
-                <h2 class="hero__title">Фитнес центр</h2>
+                <h2>Фитнес центр</h2>
               </div>
               <a class="hero__link btn" href="#season-ticket">Купить абонемент</a>
               <picture>
@@ -52,12 +52,12 @@
       <section class="gym" id="gym">
         <div class="container">
           <div class="gym__text">
-            <h2 class="gym__title title">Тренажерный зал</h2>
-            <p class="gym__square">Просторный зал площадью 900&nbsp;кв/м</p>
-            <p class="gym__about">Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья.
+            <h2>Тренажерный зал</h2>
+            <div class="gym__square">Просторный зал площадью 900&nbsp;кв/м</div>
+            <div class="gym__about">Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья.
               Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов. <span>В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;
               кардио-зона с&nbsp;40&nbsp;тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</span>
-            </p>
+              </div>
           </div>
         <div class="gym__image-and-video">
           <picture>
@@ -67,7 +67,7 @@
 
             <source media="(min-width:1200px)" srcset="./img/gym/gym-desktop.jpg 1x, ./img/gym/gym-desktop@2x.jpg 2x" width="660" height="401">
             <source media="(min-width:768px)" srcset="./img/gym/gym-tablet.jpg 1x, ./img/gym/gym-tablet@2x.jpg 2x" width="678" height="345">
-            <img src="./img/gym/gym-mobile.jpg" srcset="./img/gym/gym-mobile@2x.jpg 2x" width="320" height="313" alt="Как выглядит тренажерный зал изнутри.">
+            <img src="./img/gym/gym-mobile.jpg" srcset="./img/gym/gym-mobile@2x.jpg 2x" width="320" height="313" alt="Вид тренажерного зала изнутри.">
           </picture>
           <div class="gym__wrapper-video">
             <video width="364" height="228" poster="./img/gym/gym-poster-desktop.jpg" aria-label="Бесплатные интерактивные онлайн-курсы от Html Academy.">
@@ -75,17 +75,8 @@
               <source src="./img/gym/video.webm" type="video/webm">
             </video>
             <button type="button" class="gym__video-button">
-              <svg class="gym__video-play gym__video-play--border" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle opacity="0.2" cx="50" cy="50" r="49" stroke="url(#paint0_linear_82_467)" stroke-width="2"/>
-                <defs>
-                <linearGradient id="paint0_linear_82_467" x1="19.774" y1="3.00672e-05" x2="105.785" y2="10.6444" gradientUnits="userSpaceOnUse">
-                <stop offset="auto" stop-color="#ED0233"/>
-                <stop offset="1" stop-color="#003EB7"/>
-                </linearGradient>
-                </defs>
-              </svg>
-              <span class="gym__video-play gym__video-play--fill"></span>
-              <svg class="gym__video-play gym__video-play--poligon" width="17" height="17" aria-label="Начать проигрывание видео" focusable="false">
+              <span></span>
+              <svg width="17" height="17" aria-label="Начать проигрывание видео" focusable="false">
                 <use href="img/sprite.svg#play"></use>
               </svg>
             </button>
@@ -104,7 +95,7 @@
         </picture>
         <div class="container">
           <div class="season-tickets__wrapper">
-            <h2 class="season-tickets__title title">Абонементы</h2>
+            <h2>Абонементы</h2>
               <div class="tabs tabs--unset no-transition-global" data-tabs="parent" data-delay="300" data-height="unset">
                 <div class="tabs__controls" data-tabs="controls">
                   <button class="tabs__control tabs__control--one-mounth" type="button" data-tabs="control">1 месяц</button>
@@ -115,30 +106,27 @@
                   <div class="tabs__element" data-tabs="element">
                     <ul class="tabs__list">
                       <li class="tabs__item">
-                        <h3 class="tabs__title">С тренером</h3>
-                        <p class="tabs__text-info">12 занятий</p>
-                        <span class="tabs__text-price">
-                          <span class="tabs__text-price-value">5000<span>&nbsp;₽</span></span>
-                          <span class="tabs__text-price-back">5000</span>
-                        </span>
+                        <h3>С тренером</h3>
+                        <p>12 занятий</p>
+                        <div class="tabs__text-price">
+                          <div class="tabs__text-price-value" data-tab-price="5000">5000<span>&nbsp;₽</span></div>
+                        </div>
                         <a class="tabs__link btn" href="#">Купить абонемент</a>
                       </li>
                       <li class="tabs__item">
-                        <h3 class="tabs__title">Дневной</h3>
-                        <p class="tabs__text-info">с 8:00 до 17:00 </p>
-                        <span class="tabs__text-price">
-                          <span class="tabs__text-price-back">1700</span>
-                          <span class="tabs__text-price-value">1700<span>&nbsp;₽</span></span>
-                        </span>
+                        <h3>Дневной</h3>
+                        <p>с 8:00 до 17:00 </p>
+                        <div class="tabs__text-price">
+                          <div class="tabs__text-price-value" data-tab-price="1700">1700<span>&nbsp;₽</span></div>
+                        </div>
                         <a class="tabs__link btn" href="#">Купить абонемент</a>
                       </li>
                       <li class="tabs__item">
-                        <h3 class="tabs__title">Полный день</h3>
-                        <p class="tabs__text-info">с 8:00 до 22:00 </p>
-                        <span class="tabs__text-price">
-                          <span class="tabs__text-price-back">2700</span>
-                          <span class="tabs__text-price-value">2700<span>&nbsp;₽</span></span>
-                        </span>
+                        <h3>Полный день</h3>
+                        <p>с 8:00 до 22:00 </p>
+                        <div class="tabs__text-price">
+                          <div class="tabs__text-price-value" data-tab-price="2700">2700<span>&nbsp;₽</span></div>
+                        </div>
                         <a class="tabs__link btn" href="#">Купить абонемент</a>
                       </li>
                     </ul>
@@ -146,30 +134,27 @@
                   <div class="tabs__element" data-tabs="element">
                     <ul class="tabs__list">
                       <li class="tabs__item">
-                        <h3 class="tabs__title">С тренером</h3>
-                        <p class="tabs__text-info">12 занятий</p>
-                        <span class="tabs__text-price">
-                          <span class="tabs__text-price-value">7500<span>&nbsp;₽</span></span>
-                          <span class="tabs__text-price-back">7500</span>
-                        </span>
+                        <h3>С тренером</h3>
+                        <p>12 занятий</p>
+                        <div class="tabs__text-price">
+                          <div class="tabs__text-price-value" data-tab-price="7500">7500<span>&nbsp;₽</span></div>
+                        </div>
                         <a class="tabs__link btn" href="#">Купить абонемент</a>
                       </li>
                       <li class="tabs__item">
-                        <h3 class="tabs__title">Дневной</h3>
-                        <p class="tabs__text-info">с 8:00 до 17:00 </p>
-                        <span class="tabs__text-price">
-                          <span class="tabs__text-price-back">3700</span>
-                          <span class="tabs__text-price-value">3700<span>&nbsp;₽</span></span>
-                        </span>
+                        <h3>Дневной</h3>
+                        <p>с 8:00 до 17:00 </p>
+                        <div class="tabs__text-price">
+                          <div class="tabs__text-price-value" data-tab-price="3700">3700<span>&nbsp;₽</span></div>
+                        </div>
                         <a class="tabs__link btn" href="#">Купить абонемент</a>
                       </li>
                       <li class="tabs__item">
-                        <h3 class="tabs__title">Полный день</h3>
-                        <p class="tabs__text-info">с 8:00 до 22:00 </p>
-                        <span class="tabs__text-price">
-                          <span class="tabs__text-price-back">5400</span>
-                          <span class="tabs__text-price-value">5400<span>&nbsp;₽</span></span>
-                        </span>
+                        <h3>Полный день</h3>
+                        <p>с 8:00 до 22:00 </p>
+                        <div class="tabs__text-price">
+                          <div class="tabs__text-price-value" data-tab-price="5400">5400<span>&nbsp;₽</span></div>
+                        </div>
                         <a class="tabs__link btn" href="#">Купить абонемент</a>
                       </li>
                     </ul>
@@ -177,30 +162,27 @@
                   <div class="tabs__element" data-tabs="element">
                     <ul class="tabs__list">
                       <li class="tabs__item">
-                        <h3 class="tabs__title">С тренером</h3>
-                        <p class="tabs__text-info">12 занятий</p>
-                        <span class="tabs__text-price">
-                          <span class="tabs__text-price-value">9999<span>&nbsp;₽</span></span>
-                          <span class="tabs__text-price-back">9999</span>
-                        </span>
+                        <h3>С тренером</h3>
+                        <p>12 занятий</p>
+                        <div class="tabs__text-price">
+                          <div class="tabs__text-price-value" data-tab-price="9999">9999<span>&nbsp;₽</span></div>
+                        </div>
                         <a class="tabs__link btn" href="#">Купить абонемент</a>
                       </li>
                       <li class="tabs__item">
-                        <h3 class="tabs__title">Дневной</h3>
-                        <p class="tabs__text-info">с 8:00 до 17:00 </p>
-                        <span class="tabs__text-price">
-                          <span class="tabs__text-price-back">4500</span>
-                          <span class="tabs__text-price-value">4500<span>&nbsp;₽</span></span>
-                        </span>
+                        <h3>Дневной</h3>
+                        <p>с 8:00 до 17:00 </p>
+                        <div class="tabs__text-price">
+                          <div class="tabs__text-price-value" data-tab-price="4500">4500<span>&nbsp;₽</span></div>
+                        </div>
                         <a class="tabs__link btn" href="#">Купить абонемент</a>
                       </li>
                       <li class="tabs__item">
-                        <h3 class="tabs__title">Полный день</h3>
-                        <p class="tabs__text-info">с 8:00 до 22:00 </p>
-                        <span class="tabs__text-price">
-                          <span class="tabs__text-price-back">6200</span>
-                          <span class="tabs__text-price-value">6200<span>&nbsp;₽</span></span>
-                        </span>
+                        <h3>Полный день</h3>
+                        <p>с 8:00 до 22:00 </p>
+                        <div class="tabs__text-price">
+                          <div class="tabs__text-price-value" data-tab-price="6200">6200<span>&nbsp;₽</span></div>
+                        </div>
                         <a class="tabs__link btn" href="#">Купить абонемент</a>
                       </li>
                     </ul>
@@ -215,14 +197,14 @@
         <div class="container">
           <div class="super-games">
             <div class="super-games__info">
-              <h2 class="super-games__title">SUPER GAMES</h2>
-              <p class="super-games__date">Дата</p>
-              <p class="super-games__value">7</p>
-              <p class="super-games__text">Марта</p>
-              <p class="super-games__text super-games__text--year">2019</p>
-              <p class="super-games__date super-games__date--time">Время</p>
-              <p class="super-games__value super-games__value--time">12:00</p>
-              <p class="super-games__date super-games__date--description">Ежегодные соревнования по CrossFit</p>
+              <h2>SUPER GAMES</h2>
+              <div class="super-games__date">Дата</div>
+              <div class="super-games__value">7</div>
+              <div class="super-games__text">Марта</div>
+              <div class="super-games__text super-games__text--year">2019</div>
+              <div class="super-games__date super-games__date--time">Время</div>
+              <div class="super-games__value super-games__value--time">12:00</div>
+              <p>Ежегодные соревнования по CrossFit</p>
               <a class="super-games__link btn" href="#">заполнить заявку</a>
             </div>
             <div class="super-games__image-wrapper">
@@ -241,7 +223,7 @@
         </div>
         <div class="trainers" id="trainers">
           <div class="container">
-            <h2 class="trainers__title title">Тренеры</h2>
+            <h2>Тренеры</h2>
           </div>
           <div class="swiper">
             <ul class="swiper-wrapper">
@@ -251,9 +233,9 @@
                   <img src="./img/trainers/trainer-anna.jpg" srcset="./img/trainers/trainer-anna@2x.jpg 2x" width="226" height="274" alt="Тренер Анна Павлова">
                 </picture>
                 <div class="swiper-slide__info">
-                  <h3 class="swiper-slide__title">Анна Павлова</h3>
+                  <h3>Анна Павлова</h3>
                   <div class="swiper-slide__sub-info">
-                    <span class="swiper-slide__specialization">CrossFit</span>
+                    <span>CrossFit</span>
                     <ul class="swiper-slide__list">
                       <li class="swiper-slide__item">Certified Level 3 Trainer</li>
                       <li class="swiper-slide__item">Победитель чемпионата России по CrossFit </li>
@@ -269,9 +251,9 @@
                     <img src="./img/trainers/trainer-alex.jpg" srcset="./img/trainers/trainer-alex@2x.jpg 2x" width="226" height="274" alt="Тренер Алексей Лавров">
                   </picture>
                   <div class="swiper-slide__info">
-                    <h3 class="swiper-slide__title">Алексей Лавров</h3>
+                    <h3>Алексей Лавров</h3>
                     <div class="swiper-slide__sub-info">
-                      <span class="swiper-slide__specialization">CrossFit</span>
+                      <span>CrossFit</span>
                       <ul class="swiper-slide__list">
                         <li class="swiper-slide__item">Certified Level 3 Trainer</li>
                         <li class="swiper-slide__item">Победитель чемпионата России по CrossFit </li>
@@ -287,9 +269,9 @@
                     <img src="./img/trainers/trainer-sasha.jpg" srcset="./img/trainers/trainer-sasha@2x.jpg 2x" width="226" height="274" alt="Тренер Александр Пашков">
                   </picture>
                   <div class="swiper-slide__info">
-                    <h3 class="swiper-slide__title">Александр Пашков</h3>
+                    <h3>Александр Пашков</h3>
                     <div class="swiper-slide__sub-info">
-                      <span class="swiper-slide__specialization">CrossFit</span>
+                      <span>CrossFit</span>
                       <ul class="swiper-slide__list">
                         <li class="swiper-slide__item">Certified Level 3 Trainer</li>
                         <li class="swiper-slide__item">Победитель чемпионата России по CrossFit </li>
@@ -305,9 +287,9 @@
                     <img src="./img/trainers/trainer-maria.jpg" srcset="./img/trainers/trainer-maria@2x.jpg 2x" width="226" height="274" alt="Тренер Мария Кетова">
                   </picture>
                   <div class="swiper-slide__info">
-                    <h3 class="swiper-slide__title">Анна Павлова</h3>
+                    <h3>Анна Павлова</h3>
                     <div class="swiper-slide__sub-info">
-                      <span class="swiper-slide__specialization">CrossFit</span>
+                      <span>CrossFit</span>
                       <ul class="swiper-slide__list">
                         <li class="swiper-slide__item">Certified Level 3 Trainer</li>
                         <li class="swiper-slide__item">Победитель чемпионата России по CrossFit </li>
@@ -321,12 +303,11 @@
                 <picture>
                   <source type="image/webp" srcset="./img/trainers/trainer-anna.webp 1x, ./img/trainers/trainer-anna@2x.webp 2x" width="226" height="274">
                   <img src="./img/trainers/trainer-anna.jpg" srcset="./img/trainers/trainer-anna@2x.jpg 2x" width="226" height="274" alt="Тренер Анна Павлова">
-
                 </picture>
                 <div class="swiper-slide__info">
-                  <h3 class="swiper-slide__title">Анна Павлова</h3>
+                  <h3>Анна Павлова</h3>
                   <div class="swiper-slide__sub-info">
-                    <span class="swiper-slide__specialization">CrossFit</span>
+                    <span>CrossFit</span>
                     <ul class="swiper-slide__list">
                       <li class="swiper-slide__item">Certified Level 3 Trainer</li>
                       <li class="swiper-slide__item">Победитель чемпионата России по CrossFit </li>
@@ -342,9 +323,9 @@
                   <img src="./img/trainers/trainer-anna.jpg" srcset="./img/trainers/trainer-anna@2x.jpg 2x" width="226" height="274" alt="Тренер Анна Павлова">
                 </picture>
                 <div class="swiper-slide__info">
-                  <h3 class="swiper-slide__title">Анна Павлова</h3>
+                  <h3>Анна Павлова</h3>
                   <div class="swiper-slide__sub-info">
-                    <span class="swiper-slide__specialization">CrossFit</span>
+                    <span>CrossFit</span>
                     <ul class="swiper-slide__list">
                       <li class="swiper-slide__item">Certified Level 3 Trainer</li>
                       <li class="swiper-slide__item">Победитель чемпионата России по CrossFit </li>
@@ -360,9 +341,9 @@
                   <img src="./img/trainers/trainer-anna.jpg" srcset="./img/trainers/trainer-anna@2x.jpg 2x" width="226" height="274" alt="Тренер Анна Павлова">
                 </picture>
                 <div class="swiper-slide__info">
-                  <h3 class="swiper-slide__title">Анна Павлова</h3>
+                  <h3>Анна Павлова</h3>
                   <div class="swiper-slide__sub-info">
-                    <span class="swiper-slide__specialization">CrossFit</span>
+                    <span>CrossFit</span>
                     <ul class="swiper-slide__list">
                       <li class="swiper-slide__item">Certified Level 3 Trainer</li>
                       <li class="swiper-slide__item">Победитель чемпионата России по CrossFit </li>
@@ -378,9 +359,9 @@
                   <img src="./img/trainers/trainer-anna.jpg" srcset="./img/trainers/trainer-anna@2x.jpg 2x" width="226" height="274" alt="Тренер Анна Павлова">
                 </picture>
                 <div class="swiper-slide__info">
-                  <h3 class="swiper-slide__title">Анна Павлова</h3>
+                  <h3>Анна Павлова</h3>
                   <div class="swiper-slide__sub-info">
-                    <span class="swiper-slide__specialization">CrossFit</span>
+                    <span>CrossFit</span>
                     <ul class="swiper-slide__list">
                       <li class="swiper-slide__item">Certified Level 3 Trainer</li>
                       <li class="swiper-slide__item">Победитель чемпионата России по CrossFit </li>
@@ -398,53 +379,53 @@
 
       <section class="advantages">
         <div class="container">
-          <h2 class="advantages__title title">Наши преимущества</h2>
+          <h2>Наши преимущества</h2>
         </div>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--simulators">
-            <span class="advantages__item-value">100</span>
-            <p class="advantages__item-unit">Тренажеров</p>
-            <p class="advantages__item-text">Современные тренажеры на&nbsp;все группы мышц</p>
+            <div class="advantages__item-value">100</div>
+            <span>Тренажеров</span>
+            <p>Современные тренажеры на&nbsp;все группы мышц</p>
           </li>
 
           <li class="advantages__item  advantages__item--square">
-            <span class="advantages__item-value">900</span>
-            <p class="advantages__item-unit">кв/м</p>
-            <h3 class="advantages__item-title">Площадь</h3>
-            <p class="advantages__item-text">Занимайтесь без <br>очередей и&nbsp;толпучки</p>
+            <div class="advantages__item-value">900</div>
+            <span>кв/м</span>
+            <h3>Площадь</h3>
+            <p>Занимайтесь без <br>очередей и&nbsp;толпучки</p>
           </li>
 
           <li class="advantages__item advantages__item--parking">
-            <span class="advantages__item-value">70</span>
-            <p class="advantages__item-unit">машин</p>
-            <h3 class="advantages__item-title">Собственная парковка</h3>
-            <p class="advantages__item-text">Вы&nbsp;всегда найдете место для своей машины на&nbsp;нашей парковке</p>
+            <div class="advantages__item-value">70</div>
+            <span>машин</span>
+            <h3>Собственная парковка</h3>
+            <p>Вы&nbsp;всегда найдете место для своей машины на&nbsp;нашей парковке</p>
           </li>
 
           <li class="advantages__item advantages__item--comfort">
-            <span class="advantages__item-value">350</span>
-            <p class="advantages__item-unit">мест</p>
-            <h3 class="advantages__item-title">Комфорт</h3>
-            <p class="advantages__item-text">Просторные раздевалки, <br>душевые, фен, Wi-Fi, кулеры</p>
+            <div class="advantages__item-value">350</div>
+            <span>мест</span>
+            <h3>Комфорт</h3>
+            <p>Просторные раздевалки, <br>душевые, фен, Wi-Fi, кулеры</p>
           </li>
 
           <li class="advantages__item  advantages__item--experience">
-            <span class="advantages__item-value">5+</span>
-            <p class="advantages__item-unit">лет</p>
-            <h3 class="advantages__item-title">Тренерский опыт</h3>
-            <p class="advantages__item-text">Добивайтесь своих целей быстрее с&nbsp;профессиональным тренером</p>
+            <div class="advantages__item-value">5+</div>
+            <span>лет</span>
+            <h3>Тренерский опыт</h3>
+            <p>Добивайтесь своих целей быстрее с&nbsp;профессиональным тренером</p>
           </li>
         </ul>
       </section>
 
       <section class="stocks" id="stocks">
         <div class="container">
-          <h2 class="stocks__title title">Акции</h2>
+          <h2>Акции</h2>
           <div class="stocks__info-and-image">
             <div class="stocks__info">
-              <p class="stocks__info-title">Год</p>
-              <span class="stocks__info-value">4999</span>
-              <p class="stocks__info-text">Безлимитный абонемент в тренажерный зал</p>
+              <div class="stocks__info-title">Год</div>
+              <span>4999</span>
+              <p>Безлимитный абонемент в тренажерный зал</p>
               <a class="stocks__info-link stocks__link" href="#">подробнее</a>
             </div>
             <picture>
@@ -454,18 +435,18 @@
 
               <source media="(min-width:1200px)" srcset="./img/stocks/stocks-desktop.jpg 1x, ./img/stocks/stocks-desktop@2x.jpg 2x" width="280" height="462">
               <source media="(min-width:768px)" srcset="./img/stocks/stocks-tablet.jpg 1x, ./img/stocks/stocks-tablet@2x.jpg 2x" width="399" height="462">
-              <img src="./img/stocks/stocks-mobile.jpg"  srcset="./img/stocks/stocks-tablet.jpg 2x" width="290" height="299" alt="">
+              <img src="./img/stocks/stocks-mobile.jpg"  srcset="./img/stocks/stocks-tablet.jpg 2x" width="290" height="299" alt="Плакат акций">
             </picture>
           </div>
           <ul class="stocks__list">
-            <li class="stocks__item">
-              <h3 class="stocks__item-title">Месяц бесплатно</h3>
-              <p  class="stocks__item-text stocks__item-text--free">Приведи друга, получи <br>абонемент в&nbsp;подарок</p>
+            <li class="stocks__item stocks__item--free">
+              <h3>Месяц бесплатно</h3>
+              <p>Приведи друга, получи <br>абонемент в&nbsp;подарок</p>
               <a class="stocks__link" href="#">подробнее</a>
             </li>
             <li class="stocks__item">
-              <h3 class="stocks__item-title">Скидка 20%</h3>
-              <p  class="stocks__item-text">Корпоративный фитнес с&nbsp;командой</p>
+              <h3>Скидка 20%</h3>
+              <p>Корпоративный фитнес с&nbsp;командой</p>
               <a class="stocks__link" href="#">подробнее</a>
             </li>
           </ul>
@@ -484,41 +465,41 @@
             </div>
             <div class="tabs__content" data-tabs="content">
               <div class="tabs__element" data-tabs="element">
-                <div class="accordion" data-accordion="parent" data-close-inner="data-close-inner">
-                  <details class="accordion__element" data-accordion="element">
+                <div class="accordion">
+                  <details class="accordion__element">
                     <summary>
-                      <h3 class="accordion__title">Как стать членом фитнес-центра?</h3>
-                      <span class="plus"></span>
+                      <h3>Как стать членом фитнес-центра?</h3>
+                      <span></span>
                     </summary>
                     <p>При первом посещении и&nbsp;покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор.
                       При покупке абонемента онлайн, анкета также заполняется онлайн и&nbsp;договор придет вам на&nbsp;почту.
                     </p>
                   </details>
 
-                  <details class="accordion__element accordion__element--schedule" data-accordion="element">
+                  <details class="accordion__element accordion__element--schedule">
                     <summary>
-                      <h3 class="accordion__title">Где можно посмотреть расписание?</h3>
-                      <span class="plus"></span>
+                      <h3>Где можно посмотреть расписание?</h3>
+                      <span></span>
                     </summary>
                     <p>При первом посещении и&nbsp;покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор.
                       При покупке абонемента онлайн, анкета также заполняется онлайн и&nbsp;договор придет вам на&nbsp;почту.
                     </p>
                   </details>
 
-                  <details class="accordion__element accordion__element--coolers" data-accordion="element">
+                  <details class="accordion__element accordion__element--coolers">
                     <summary>
-                    <h3 class="accordion__title">Есть кулеры в центре? Предоставляются полотенца?</h3>
-                    <span class="plus"></span>
+                    <h3>Есть кулеры в центре? Предоставляются полотенца?</h3>
+                    <span></span>
                     </summary>
                     <p>При первом посещении и&nbsp;покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор.
                       При покупке абонемента онлайн, анкета также заполняется онлайн и&nbsp;договор придет вам на&nbsp;почту.
                     </p>
                   </details>
 
-                  <details class="accordion__element accordion__element--trainers" data-accordion="element">
+                  <details class="accordion__element accordion__element--trainers">
                     <summary>
-                      <h3 class="accordion__title">Сколько тренеров работает в клубе и какова их квалификация?</h3>
-                      <span class="plus"></span>
+                      <h3>Сколько тренеров работает в клубе и какова их квалификация?</h3>
+                      <span></span>
                     </summary>
                     <p>При первом посещении и&nbsp;покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор.
                       При покупке абонемента онлайн, анкета также заполняется онлайн и&nbsp;договор придет вам на&nbsp;почту.
@@ -528,41 +509,41 @@
               </div>
 
               <div class="tabs__element" data-tabs="element">
-                <div class="accordion" data-accordion="parent" data-close-inner="data-close-inner">
-                  <details class="accordion__element" data-accordion="element">
+                <div class="accordion">
+                  <details class="accordion__element">
                     <summary>
-                      <h3 class="accordion__title">Занятия с&nbsp;тренером входят в&nbsp;абонемент?</h3>
-                      <span class="plus"></span>
+                      <h3>Занятия с&nbsp;тренером входят в&nbsp;абонемент?</h3>
+                      <span></span>
                     </summary>
                     <p>При посещении тренажерного зала вам необходимо оплачить занятия с&nbsp;тренером отдельно.
                       В&nbsp;зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по&nbsp;тренажеру или технике выполнения упражнения.
                     </p>
                   </details>
 
-                  <details class="accordion__element accordion__element--season-ticket" data-accordion="element">
+                  <details class="accordion__element accordion__element--season-ticket">
                     <summary>
-                    <h3 class="accordion__title">Можно&nbsp;ли заморозить абонемент?</h3>
-                    <span class="plus"></span>
+                    <h3>Можно&nbsp;ли заморозить абонемент?</h3>
+                    <span></span>
                     </summary>
                     <p>При посещении тренажерного зала вам необходимо оплачить занятия с&nbsp;тренером отдельно.
                       В&nbsp;зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по&nbsp;тренажеру или технике выполнения упражнения.
                     </p>
                   </details>
 
-                  <details class="accordion__element accordion__element--limit" data-accordion="element">
+                  <details class="accordion__element accordion__element--limit">
                     <summary>
-                    <h3 class="accordion__title">Есть&nbsp;ли лимит по&nbsp;посещениям тренажерного зала и&nbsp;групповых занятий?</h3>
-                    <span class="plus"></span>
+                    <h3>Есть&nbsp;ли лимит по&nbsp;посещениям тренажерного зала и&nbsp;групповых занятий?</h3>
+                    <span></span>
                     </summary>
                     <p>При посещении тренажерного зала вам необходимо оплачить занятия с&nbsp;тренером отдельно.
                       В&nbsp;зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по&nbsp;тренажеру или технике выполнения упражнения.
                     </p>
                   </details>
 
-                  <details class="accordion__element" data-accordion="element">
+                  <details class="accordion__element">
                     <summary>
-                    <h3 class="accordion__title">Что такое семейный доступ и&nbsp;доступ для друзей?</h3>
-                    <span class="plus"></span>
+                    <h3>Что такое семейный доступ и&nbsp;доступ для друзей?</h3>
+                    <span></span>
                     </summary>
                     <p>При посещении тренажерного зала вам необходимо оплачить занятия с&nbsp;тренером отдельно.
                       В&nbsp;зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по&nbsp;тренажеру или технике выполнения упражнения.
@@ -571,51 +552,50 @@
                 </div>
               </div>
               <div class="tabs__element" data-tabs="element">
-                <div class="accordion" data-accordion="parent" data-close-inner="data-close-inner">
-                  <details class="accordion__element" data-accordion="element">
+                <div class="accordion">
+                  <details class="accordion__element">
                     <summary>
-                    <h3 class="accordion__title">Предлагает&nbsp;ли клуб услуги по&nbsp;консультированию по&nbsp;вопросам питания?</h3>
-                    <span class="plus"></span>
+                    <h3>Предлагает&nbsp;ли клуб услуги по&nbsp;консультированию по&nbsp;вопросам питания?</h3>
+                    <span></span>
                     </summary>
                     <p>Да. Вы&nbsp;можете обратиться как к&nbsp;своему тренеру, так и&nbsp;к&nbsp;нашему нутрициологу. Специалист уточнит ваши данные, цели и&nbsp;предложит программу питания.
                     </p>
                   </details>
 
-                  <details class="accordion__element" data-accordion="element">
+                  <details class="accordion__element">
                     <summary>
-                    <h3 class="accordion__title">Проводятся&nbsp;ли в&nbsp;клубе <br>какие-либо мероприятия <br>или соревнования?</h3>
-                    <span class="plus"></span>
+                    <h3>Проводятся&nbsp;ли в&nbsp;клубе <br>какие-либо мероприятия <br>или соревнования?</h3>
+                    <span></span>
                     </summary>
                     <p>Да. Вы&nbsp;можете обратиться как к&nbsp;своему тренеру, так и&nbsp;к&nbsp;нашему нутрициологу. Специалист уточнит ваши данные, цели и&nbsp;предложит программу питания.
                     </p>
                   </details>
 
-                  <details class="accordion__element accordion__element--center" data-accordion="element">
+                  <details class="accordion__element accordion__element--center">
                     <summary>
-                    <h3 class="accordion__title">Можно&nbsp;ли приобрести в&nbsp;центре спортивное питание?</h3>
+                    <h3>Можно&nbsp;ли приобрести в&nbsp;центре спортивное питание?</h3>
+                    <span></span>
                     </summary>
-                    <button class="accordion__button" type="button" data-accordion="button"></button>
                     <p>Да. Вы&nbsp;можете обратиться как к&nbsp;своему тренеру, так и&nbsp;к&nbsp;нашему нутрициологу. Специалист уточнит ваши данные, цели и&nbsp;предложит программу питания.
                     </p>
                   </details>
 
-                  <details class="accordion__element accordion__element--child" data-accordion="element">
+                  <details class="accordion__element accordion__element--child">
                     <summary>
-                    <h3 class="accordion__title">Есть&nbsp;ли в&nbsp;центре детская комната?</h3>
-                    <span class="plus"></span>
+                    <h3>Есть&nbsp;ли в&nbsp;центре детская комната?</h3>
+                    <span></span>
                     </summary>
-                    <button class="accordion__button" type="button" data-accordion="button"></button>
                     <p>Да. Вы&nbsp;можете обратиться как к&nbsp;своему тренеру, так и&nbsp;к&nbsp;нашему нутрициологу. Специалист уточнит ваши данные, цели и&nbsp;предложит программу питания.
                     </p>
                   </details>
                 </div>
               </div>
               <div class="tabs__element" data-tabs="element">
-                <div class="accordion" data-accordion="parent" data-close-inner="data-close-inner">
-                  <details class="accordion__element" data-accordion="element">
+                <div class="accordion">
+                  <details class="accordion__element">
                     <summary>
-                      <h3 class="accordion__title">Есть в&nbsp;фитнес-центре дресс-код?</h3>
-                      <span class="plus"></span>
+                      <h3>Есть в&nbsp;фитнес-центре дресс-код?</h3>
+                      <span></span>
                     </summary>
                     <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и&nbsp;одежду.
                       Верхняя и&nbsp;нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки).
@@ -624,10 +604,10 @@
                     </p>
                   </details>
 
-                  <details class="accordion__element" data-accordion="element">
+                  <details class="accordion__element">
                     <summary>
-                    <h3 class="accordion__title">Можно&nbsp;ли приводить с&nbsp;собой детей на&nbsp;тренировки?</h3>
-                    <span class="plus"></span>
+                    <h3>Можно&nbsp;ли приводить с&nbsp;собой детей на&nbsp;тренировки?</h3>
+                    <span></span>
                     </summary>
                     <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и&nbsp;одежду.
                       Верхняя и&nbsp;нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки).
@@ -636,10 +616,10 @@
                     </p>
                   </details>
 
-                  <details class="accordion__element" data-accordion="element">
+                  <details class="accordion__element">
                     <summary>
-                    <h3 class="accordion__title">Какие дополнительные правила посещения центра?</h3>
-                    <span class="plus"></span>
+                    <h3>Какие дополнительные правила посещения центра?</h3>
+                    <span></span>
                     </summary>
                     <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и&nbsp;одежду.
                       Верхняя и&nbsp;нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки).
@@ -648,10 +628,10 @@
                     </p>
                   </details>
 
-                  <details class="accordion__element" data-accordion="element">
+                  <details class="accordion__element">
                     <summary>
-                    <h3 class="accordion__title">Нужна&nbsp;ли медицинская справка для посещения залов и&nbsp;бассейна?</h3>
-                    <span class="plus"></span>
+                    <h3>Нужна&nbsp;ли медицинская справка для посещения залов и&nbsp;бассейна?</h3>
+                    <span></span>
                     </summary>
                     <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и&nbsp;одежду.
                       Верхняя и&nbsp;нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки).
@@ -668,43 +648,43 @@
 
       <section class="reviews">
         <div class="container">
-          <h2 class="reviews__title title">Отзывы</h2>
+          <h2>Отзывы</h2>
         </div>
         <div class="swiper swiper-reviews">
           <ul class="swiper-wrapper">
-            <li class="swiper-slide">
+            <li class="swiper-slide swiper-slide-reviews">
               <picture>
                 <source type="image/webp" srcset="./img/reviews/avatar.webp 1x, ./img/reviews/avatar@2x.webp 2x" width="80" height="80">
                 <img src="./img/reviews/avatar.png" srcset="./img/reviews/avatar@2x.png 2x" width="80" height="80" alt="Аватарка Анны Орловой">
               </picture>
               <div class="swiper-slide__info-reviews">
-                <h3 class="swiper-slide__title">Анна Орлова</h3>
+                <h3>Анна Орлова</h3>
                 <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный.
                   Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;
                 </p>
               </div>
             </li>
 
-            <li class="swiper-slide">
+            <li class="swiper-slide swiper-slide-reviews">
               <picture>
                 <source type="image/webp" srcset="./img/reviews/avatar.webp 1x, ./img/reviews/avatar@2x.webp 2x" width="80" height="80">
                 <img src="./img/reviews/avatar.png" srcset="./img/reviews/avatar@2x.png 2x" width="80" height="80" alt="Аватарка Анны Орловой">
               </picture>
               <div class="swiper-slide__info-reviews">
-                <h3 class="swiper-slide__title">Анна Орлова</h3>
+                <h3>Анна Орлова</h3>
                 <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный.
                   Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;
                 </p>
               </div>
             </li>
 
-            <li class="swiper-slide">
+            <li class="swiper-slide swiper-slide-reviews">
               <picture>
                 <source type="image/webp" srcset="./img/reviews/avatar.webp 1x, ./img/reviews/avatar@2x.webp 2x" width="80" height="80">
                 <img src="./img/reviews/avatar.png" srcset="./img/reviews/avatar@2x.png 2x" width="80" height="80" alt="Аватарка Анны Орловой">
               </picture>
               <div class="swiper-slide__info-reviews">
-                <h3 class="swiper-slide__title">Анна Орлова</h3>
+                <h3>Анна Орлова</h3>
                 <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный.
                   Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;
                 </p>
@@ -718,7 +698,7 @@
 
       <section class="free-lesson-and-contacts">
         <div class="free-lesson" data-form-validate="data-form-validate" data-callback="base">
-          <h2 class="free-lesson__title title">Бесплатное занятие</h2>
+          <h2>Бесплатное занятие</h2>
           <form action="https://echo.htmlacademy.ru/" method="post">
             <div class="custom-input" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Некорректно заполнено поле" data-required="data-required">
               <input type="text" name="user-name-1" placeholder="Имя" required aria-label="Введите имя.">
@@ -731,23 +711,23 @@
         </div>
 
         <div class="contacts">
-          <h2 class="contacts__title title">Контакты</h2>
+          <h2>Контакты</h2>
           <ul class="contacts__list">
             <li class="contacts__item">
-              <h3 class="contacts__item-title">Адрес:</h3>
-              <p class="contacts__item-text">г. Омск, ул. 60 лет Октября, 7</p>
+              <h3>Адрес:</h3>
+              <p>г. Омск, ул. 60 лет Октября, 7</p>
             </li>
             <li class="contacts__item contacts__item--tel">
-              <h3 class="contacts__item-title">Телефон:</h3>
-              <p class="contacts__item-text">8-800-555-55-55</p>
+              <h3>Телефон:</h3>
+              <p>8-800-555-55-55</p>
             </li>
             <li class="contacts__item">
-              <h3 class="contacts__item-title">График работы:</h3>
-              <p class="contacts__item-text">Пн-Вс: с 8:00 до 22:00</p>
+              <h3>График работы:</h3>
+              <p>Пн-Вс: с 8:00 до 22:00</p>
             </li>
             <li class="contacts__item contacts__item--email">
-              <h3 class="contacts__item-title">Email:</h3>
-              <p class="contacts__item-text">omsk@supergym.ru</p>
+              <h3>Email:</h3>
+              <p>omsk@supergym.ru</p>
             </li>
           </ul>
         </div>
@@ -774,6 +754,15 @@
             <a class="source__link" href="#trainers">Тренеры</a>
           </li>
           <li  class="source__item source__item--schedule">
+            <a class="source__link" href="#">Расписание</a>
+          </li>
+          <li  class="source__item">
+            <a class="source__link" href="#stocks">Акции</a>
+          </li>
+          <li  class="source__item">
+            <a class="source__link" href="#trainers">Тренеры</a>
+          </li>
+          <li  class="source__item">
             <a class="source__link" href="#">Расписание</a>
           </li>
         </ul>

@@ -2,60 +2,33 @@
   padding: 126px 0 120px;
   margin-top: 789px;
 
-  @include vp-1199 {
-    padding: 152px 0 100px;
-  }
-
-  @include vp-767 {
-    padding: 87px 0 70px;
-  }
-
-  .swiper-reviews {
-    width: 56.02vw;
+  h2 {
+    text-align: center;
+    margin: 0 0 37px;
 
     @include vp-1199 {
-      width: 100vw;
-    }
-  }
-
-  .swiper__button {
-    @include vp-1199 {
-      top: 17px;
+      margin-bottom: 41px;
     }
 
     @include vp-767 {
-      top: 10px;
+      margin-bottom: 43px;
     }
   }
 
-  .swiper-slide {
-    display: flex;
-    justify-content: space-between;
-    background-color: $color-resolution-blue;
-    padding: 59px 62px 57px;
-    margin-top: 2px;
-
-    img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-
-      @include vp-767 {
-        width: 68px;
-        height: 68px;
-        margin: 0 0 0 12px;
-      }
-    }
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
 
     @include vp-767 {
-      position: relative;
-      flex-direction: column;
-      padding: 40px 29px 35px;
+      width: 68px;
+      height: 68px;
+      margin: 0 0 0 12px;
     }
   }
 
-  .swiper-slide__title {
+  h3 {
     margin-bottom: 15px;
     font-size: 20px;
     line-height: 23px;
@@ -69,21 +42,54 @@
     }
   }
 
+  p {
+    line-height: 22px;
+    margin: 0;
+
+    @include vp-767 {
+      text-align: center;
+    }
+  }
+
+  @include vp-1199 {
+    padding: 152px 0 100px;
+  }
+
+  @include vp-767 {
+    padding: 87px 0 70px;
+  }
+
+
+  .swiper__button {
+    @include vp-1199 {
+      top: 17px;
+    }
+
+    @include vp-767 {
+      top: 10px;
+    }
+  }
+
+  .swiper-slide-reviews {
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-resolution-blue;
+    padding: 59px 62px 57px;
+    margin-top: 2px;
+
+    @include vp-767 {
+      position: relative;
+      flex-direction: column;
+      padding: 40px 29px 35px;
+    }
+  }
+
   .swiper-slide__info-reviews {
     width: 75.23%;
     position: static;
     padding: 0;
     color: $color-default-white;
     align-items: flex-start;
-
-    p {
-      line-height: 22px;
-      margin: 0;
-
-      @include vp-767 {
-        text-align: center;
-      }
-    }
 
     @include vp-1199 {
       width: 73.87%;
@@ -95,8 +101,7 @@
     }
   }
 
-  .swiper-button-prev.swiper-button-disabled,
-  .swiper-button-next.swiper-button-disabled {
+  .swiper-button-disabled {
     opacity: 1;
 
     &::after {
@@ -105,15 +110,10 @@
   }
 }
 
-.reviews__title {
-  text-align: center;
-  margin: 0 0 37px;
+.swiper-reviews {
+  width: 56.02vw;
 
   @include vp-1199 {
-    margin-bottom: 41px;
-  }
-
-  @include vp-767 {
-    margin-bottom: 43px;
+    width: 100vw;
   }
 }

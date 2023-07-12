@@ -2,10 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import './modules/video';
-import './modules/tabs/index';
 import './modules/tabs/init-tabs';
-import './modules/tabs/tabs';
-import './modules/scroll-link';
 
 // ---------------------------------
 

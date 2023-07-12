@@ -1,5 +1,26 @@
 .tabs {
   max-width: 100%;
+
+  h3 {
+    margin: 0;
+    font-size: 26px;
+    font-family: $ff-roboto-bold;
+    font-weight: 700;
+    line-height: 110.16%;
+
+    @include vp-767 {
+      font-size: 22px;
+    }
+  }
+
+  p {
+    margin: 9px 0 51px;
+    color: $color-chambray;
+
+    @include vp-767 {
+      margin-bottom: 42px;
+    }
+  }
 }
 
 .tabs__controls {
@@ -97,6 +118,7 @@
   list-style-type: none;
   text-align: center;
   border: 7px solid transparent;
+  z-index: -1;
 
   &:hover,
   &:focus-visible {
@@ -120,27 +142,6 @@
   }
 }
 
-.tabs__title {
-  margin: 0;
-  font-size: 26px;
-  font-family: $ff-roboto-bold;
-  font-weight: 700;
-  line-height: 110.16%;
-
-  @include vp-767 {
-    font-size: 22px;
-  }
-}
-
-.tabs__text-info {
-  margin: 9px 0 51px;
-  color: $color-chambray;
-
-  @include vp-767 {
-    margin-bottom: 42px;
-  }
-}
-
 .tabs__text-price {
   display: block;
   position: relative;
@@ -151,18 +152,6 @@
 
   @include vp-767 {
     min-height: 67px;
-  }
-}
-
-.tabs__text-price-back {
-  color: #e8e8e8;
-  font-size: 100px;
-  line-height: 72px;
-  margin: 0;
-
-  @include vp-767 {
-    font-size: 80px;
-    line-height: 58px;
   }
 }
 
@@ -178,6 +167,23 @@
 
   span {
     color: $color-default-sapphire;
+  }
+
+  &::before {
+    position: absolute;
+    content: attr(data-tab-price);
+    top: -36px;
+    left: 0;
+    color: #e8e8e8;
+    font-size: 100px;
+    line-height: 72px;
+    margin: 0;
+    z-index: -1;
+
+    @include vp-767 {
+      font-size: 80px;
+      line-height: 58px;
+    }
   }
 
   @include vp-767 {

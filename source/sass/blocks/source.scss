@@ -22,6 +22,7 @@
 
 .source__item {
   list-style-type: none;
+  grid-column: 2/3;
 
   &:not(:last-child) {
     margin-right: 20px;
@@ -34,10 +35,9 @@
   @include vp-767 {
     margin-bottom: 16px;
 
-    &--stocks,
-    &--trainers,
-    &--schedule {
-      grid-column: 2/3;
+    &--services,
+    &--ticket {
+      grid-column: 1/2;
     }
 
     &--stocks {
