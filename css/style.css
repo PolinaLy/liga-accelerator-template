@@ -2319,8 +2319,9 @@ button,
   font-weight: 400;
   line-height: 16px;
   width: 190px;
-  padding: 10px 10px 10px 2px;
+  padding: 10px 10px 10px 0;
   border: none;
+  border: 2px solid transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   background-color: transparent;
   color: #ffffff;
@@ -2353,7 +2354,7 @@ button,
 
 .free-lesson input:hover {
   border-color: #ffffff;
-  padding-left: 0;
+  padding-bottom: 9px;
 }
 
 .free-lesson input:active,
