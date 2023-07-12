@@ -676,10 +676,7 @@ button,
   margin-left: auto;
   padding: 10px;
   border: 2px solid rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
   outline: none;
-  -webkit-transition: border 0.3s ease;
-  transition: border 0.3s ease;
 }
 @media screen and (max-width: 767px) {
   .custom-input input {
@@ -3388,7 +3385,7 @@ button,
   font-weight: 400;
   line-height: 16px;
   width: 190px;
-  padding: 10px 10px 10px 0;
+  padding: 10px 10px 10px 2px;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   background-color: transparent;
@@ -3416,6 +3413,7 @@ button,
 }
 .free-lesson input:hover {
   border-color: #ffffff;
+  padding-left: 0;
 }
 .free-lesson input:active, .free-lesson input:focus-visible {
   padding-left: 10px;
