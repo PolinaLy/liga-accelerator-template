@@ -134,6 +134,12 @@
       }
     }
 
+    &--center {
+      h3 {
+        max-width: 83%;
+      }
+    }
+
     &--center summary::before,
     &--child summary::before {
       top: 25px;

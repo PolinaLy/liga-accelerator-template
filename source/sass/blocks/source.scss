@@ -12,11 +12,12 @@
   }
 
   @include vp-767 {
-    display: grid;
-    grid-template-columns: 55% 50%;
     margin-top: -21px;
     margin-left: 0;
     margin-bottom: 18px;
+    display: block;
+    column-count: 2;
+    column-gap: 32px;
   }
 }
 
@@ -35,21 +36,8 @@
   @include vp-767 {
     margin-bottom: 16px;
 
-    &--services,
-    &--ticket {
-      grid-column: 1/2;
-    }
-
-    &--stocks {
-      grid-row-start: 1;
-    }
-
-    &--services {
-      grid-row-start: 2;
-    }
-
-    &--ticket {
-      grid-row-start: 3;
+    &:first-child {
+      margin-top: 40px;
     }
   }
 }

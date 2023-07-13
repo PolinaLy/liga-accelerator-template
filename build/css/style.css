@@ -743,7 +743,7 @@ button,
 }
 @media (max-width: 767px) {
   .custom-input {
-    padding-bottom: 23px;
+    padding-bottom: 9px;
     width: 100%;
   }
 }
@@ -950,13 +950,16 @@ button,
 }
 @media (max-width: 767px) {
   .source {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 55% 50%;
-    grid-template-columns: 55% 50%;
     margin-top: -21px;
     margin-left: 0;
     margin-bottom: 18px;
+    display: block;
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 32px;
+       -moz-column-gap: 32px;
+            column-gap: 32px;
   }
 }
 
@@ -978,22 +981,8 @@ button,
   .source__item {
     margin-bottom: 16px;
   }
-  .source__item--services, .source__item--ticket {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
-  }
-  .source__item--stocks {
-    -ms-grid-row: 1;
-        grid-row-start: 1;
-  }
-  .source__item--services {
-    -ms-grid-row: 2;
-        grid-row-start: 2;
-  }
-  .source__item--ticket {
-    -ms-grid-row: 3;
-        grid-row-start: 3;
+  .source__item:first-child {
+    margin-top: 40px;
   }
 }
 
@@ -1569,6 +1558,9 @@ button,
   }
   .accordion__element--trainers h3 {
     padding-right: 0;
+  }
+  .accordion__element--center h3 {
+    max-width: 83%;
   }
   .accordion__element--center summary::before, .accordion__element--child summary::before {
     top: 25px;
@@ -2547,6 +2539,7 @@ button,
   padding-bottom: 77px;
 }
 .advantages__item span {
+  display: block;
   color: #2e35ac;
   font-size: 14px;
   line-height: 14px;
@@ -2728,7 +2721,7 @@ button,
 }
 @media (max-width: 767px) {
   .advantages__item--simulators span {
-    margin-top: 6px;
+    margin-top: 11px;
   }
 }
 @media (max-width: 1199px) {
@@ -2761,7 +2754,7 @@ button,
     padding: 0 45px;
   }
   .advantages__item:not(:last-child) {
-    margin-bottom: 44px;
+    margin-bottom: 45px;
   }
   .advantages__item--simulators {
     padding: 54px 54px 46px;
@@ -2788,6 +2781,11 @@ button,
   .advantages__item-value {
     font-size: 58px;
     line-height: 43px;
+  }
+}
+@media (max-width: 767px) {
+  .advantages__item-value {
+    line-height: 47px;
   }
 }
 
@@ -3061,7 +3059,7 @@ button,
 }
 @media (max-width: 767px) {
   .questions-and-answers {
-    padding: 68px 0 70px;
+    padding: 72px 0 70px;
   }
 }
 .questions-and-answers .tabs {
@@ -3114,7 +3112,7 @@ button,
   .questions-and-answers .tabs__controls {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 }
 .questions-and-answers .tabs__control {
@@ -3346,7 +3344,7 @@ button,
   .free-lesson h2 {
     letter-spacing: 1.6px;
     width: 65.46%;
-    margin: 0 auto 25px;
+    margin: 0 auto 14px;
   }
 }
 @media (max-width: 767px) {
@@ -3376,7 +3374,7 @@ button,
 }
 @media (max-width: 767px) {
   .free-lesson .btn {
-    margin-top: 15px;
+    margin-top: 25px;
   }
 }
 .free-lesson input {
