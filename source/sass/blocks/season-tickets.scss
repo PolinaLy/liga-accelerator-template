@@ -1,0 +1,82 @@
+.season-tickets {
+  position: relative;
+  width: 100vw;
+  background-color: $color-ghost-white;
+
+  h2 {
+    margin: 0;
+    text-align: center;
+
+    @include vp-1199 {
+      margin: 0 0 4px -14px;
+    }
+  }
+
+  .tabs__control {
+    &.is-active,
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      opacity: 1;
+      border-bottom: 2px solid #d10a42;
+      padding-bottom: 13px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 287px;
+    height: 494px;
+    background-image: url("../img/season-tickets/disks-desktop.png");
+    right: 0;
+    bottom: -149px;
+
+    @include retina {
+      background-image: url("../img/season-tickets/disks-desktop@2x.png");
+      width: 287px;
+      height: 494px;
+      background-size: 100%;
+    }
+
+    @include vp-1199 {
+      width: 347px;
+      height: 444px;
+      bottom: -125px;
+      background-image: url("../img/season-tickets/disks-tablet.png");
+
+      @include retina {
+        background-image: url("../img/season-tickets/disks-tablet@2x.png");
+        width: 347px;
+        height: 444px;
+        background-size: 100%;
+      }
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  @include vp-767 {
+    .tabs__controls {
+      min-width: 290px;
+      width: 90px;
+    }
+  }
+}
+
+.season-tickets__wrapper {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 120px 0;
+
+  @include vp-1199 {
+    width: 100%;
+    padding: 100px 0;
+  }
+
+  @include vp-767 {
+    padding: 64px 0;
+  }
+}

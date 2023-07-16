@@ -91,6 +91,14 @@
   color: $color-default-white;
   background-color: $color-torch-red;
 
+  h3 {
+    font-size: 28px;
+    font-family: $ff-roboto-bold;
+    font-weight: 700;
+    line-height: 22px;
+    margin: 0 0 15px;
+  }
+
   span {
     font-size: 70px;
     font-family: $ff-roboto-bold;
@@ -118,14 +126,6 @@
     align-items: center;
     text-align: center;
   }
-}
-
-.stocks__info-title {
-  font-size: 28px;
-  font-family: $ff-roboto-bold;
-  font-weight: 700;
-  line-height: 22px;
-  margin: 0 0 15px;
 }
 
 .stocks__info-link {

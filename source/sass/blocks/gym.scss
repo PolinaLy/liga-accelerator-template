@@ -61,6 +61,40 @@
       padding: 0;
     }
   }
+
+  span {
+    display: block;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 40px;
+
+    @include vp-1199 {
+      margin: 0 0 35px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 24px;
+    }
+  }
+
+  p {
+    font-family: $ff-roboto-light;
+    font-weight: 300;
+    margin-bottom: 0;
+
+    @include vp-767 {
+      margin-right: 28px;
+    }
+  }
+
+  p + p {
+    display: inline-block;
+    margin-top: 8px;
+
+    @include vp-1199 {
+      display: none;
+    }
+  }
 }
 
 .gym__text {
@@ -76,38 +110,6 @@
   @include vp-767 {
     padding: 0 15px 35px;
     text-align: start;
-  }
-}
-
-.gym__about {
-  font-family: $ff-roboto-light;
-  font-weight: 300;
-
-  @include vp-767 {
-    margin-right: 28px;
-  }
-
-  span {
-    display: inline-block;
-    margin-top: 8px;
-
-    @include vp-1199 {
-      display: none;
-    }
-  }
-}
-
-.gym__square {
-  font-size: 18px;
-  margin-top: 15px;
-  margin-bottom: 40px;
-
-  @include vp-1199 {
-    margin: 0 0 35px;
-  }
-
-  @include vp-767 {
-    margin-bottom: 24px;
   }
 }
 

@@ -8,8 +8,4 @@ const initTabs = () => {
   window.tabs = tabs;
 };
 
-window.addEventListener('DOMContentLoaded', () => {
-  window.addEventListener('load', () => {
-    initTabs();
-  });
-});
+export {initTabs, tabs};

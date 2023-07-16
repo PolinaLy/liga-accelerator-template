@@ -21,7 +21,7 @@
   }
 
   @include vp-767 {
-    padding: 64px 0 41px;
+    padding: 64px 0 34px;
   }
 }
 
@@ -60,7 +60,8 @@
     }
   }
 
-  p {
+  p,
+  a {
     font-size: 14px;
     line-height: 16px;
     margin: 0;

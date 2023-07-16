@@ -31,26 +31,22 @@
 @import "blocks/tabs/tabs";
 @import "blocks/accordion/accordion";
 @import "blocks/accordion/data-accordion";
-@import "blocks/swiper/swiper-slide";
-@import "blocks/swiper/swiper";
-@import "blocks/swiper/swiper-button-next";
-@import "blocks/swiper/swiper-button-prev";
 
 // Screens
 // -----------------------------
 
-@import "blocks/screens/main";
-@import "blocks/screens/gym";
-@import "blocks/screens/season-tickets";
-@import "blocks/screens/super-games-and-trainers/super-games-and-trainers";
-@import "blocks/screens/super-games-and-trainers/super-games";
-@import "blocks/screens/super-games-and-trainers/trainers";
-@import "blocks/screens/advantages";
-@import "blocks/screens/stocks";
-@import "blocks/screens/questions-and-answers";
-@import "blocks/screens/reviews";
-@import "blocks/screens/free-lesson-and-contacts/free-lesson-and-contacts";
-@import "blocks/screens/free-lesson-and-contacts/free-lesson";
-@import "blocks/screens/free-lesson-and-contacts/contacts";
+@import "blocks/main";
+@import "blocks/gym";
+@import "blocks/season-tickets";
+@import "blocks/super-games-and-trainers";
+@import "blocks/super-games";
+@import "blocks/trainers";
+@import "blocks/advantages";
+@import "blocks/stocks";
+@import "blocks/questions-and-answers";
+@import "blocks/reviews";
+@import "blocks/free-lesson-and-contacts";
+@import "blocks/free-lesson";
+@import "blocks/contacts";
 
 // ---------------------------------
