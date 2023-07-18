@@ -1,6 +1,6 @@
 .contacts {
   width: 50vw;
-  padding: 56px 0 68px 9%;
+  padding: 56px 0 60px 9%;
 
   h2 {
     margin: 0 0 41px;
@@ -17,7 +17,7 @@
 
   @include vp-1199 {
     width: 100vw;
-    padding: 60px 0 67px;
+    padding: 60px 0 62px;
   }
 
   @include vp-767 {
@@ -43,13 +43,13 @@
 
 .contacts__item {
   width: 230px;
-  padding-bottom: 23px;
+  padding-bottom: 15px;
   list-style-type: none;
 
   h3 {
     font-size: 16px;
     line-height: 19px;
-    font-family: $ff-roboto-bold;
+    font-family: $ff-roboto;
     font-weight: 700;
     margin: 0 0 7px;
 
@@ -75,6 +75,10 @@
   &:nth-child(2n+1) {
     border-right: 1px solid #74819c;
     margin-right: 60px;
+
+    @media (max-width: 1268px) {
+      margin-right: 32px;
+    }
   }
 
   &:last-child,
@@ -84,7 +88,7 @@
 
   @include vp-1199 {
     width: 53.09%;
-    padding-bottom: 26px;
+    padding-bottom: 22px;
 
     &:nth-child(2n) {
       width: 37.92%;
@@ -97,6 +101,7 @@
 
   @include vp-767 {
     width: 100%;
+    padding-bottom: 27px;
 
     &:nth-child(2n+1) {
       border-right: none;
