@@ -389,7 +389,7 @@ template {
 @font-face {
   font-style: normal;
   font-weight: 300;
-  font-family: "Roboto Light";
+  font-family: "Roboto";
   font-display: swap;
   src: url("../fonts/RobotoCondensed-Light.woff2") format("woff2"), url("../fonts/RobotoCondensed-Light.woff") format("woff");
 }
@@ -397,7 +397,7 @@ template {
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "Roboto Regular";
+  font-family: "Roboto";
   font-display: swap;
   src: url("../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("../fonts/RobotoCondensed-Regular.woff") format("woff");
 }
@@ -405,7 +405,7 @@ template {
 @font-face {
   font-style: normal;
   font-weight: 700;
-  font-family: "Roboto Bold";
+  font-family: "Roboto";
   font-display: swap;
   src: url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../fonts/RobotoCondensed-Bold.woff") format("woff");
 }
@@ -445,7 +445,7 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-family: "Roboto Regular", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   color: #102654;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -621,7 +621,7 @@ button,
 }
 
 .rouble {
-  font-family: "Roboto Regular", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   /* stylelint-disable */
   text-transform: lowercase !important;
   font-weight: 400 !important;
@@ -691,7 +691,7 @@ button,
   color: #102654;
   border: none;
   cursor: pointer;
-  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 12px;
   line-height: 12px;
   font-weight: 700;
@@ -997,7 +997,8 @@ button,
 }
 
 .hero__list {
-  font-family: "Roboto Regular", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   -ms-flex-item-align: end;
@@ -1110,26 +1111,7 @@ button,
   width: 100%;
 }
 
-.tabs--unset .tabs__element {
-  height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.tabs__title h3 {
-  margin: 0;
-  font-size: 26px;
-  font-family: "Roboto Bold", "Arial", sans-serif;
-  font-weight: 700;
-  line-height: 110.16%;
-}
-
-.tabs__title span {
-  margin: 9px 0 51px;
-  color: #495a7d;
-}
-
-.tabs__list {
+.tabs__element ul {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto auto;
@@ -1141,7 +1123,7 @@ button,
   padding: 0;
 }
 
-.tabs__item {
+.tabs__element li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1157,30 +1139,48 @@ button,
   border: 7px solid transparent;
 }
 
-.tabs__item:hover,
-.tabs__item:focus-visible {
+.tabs__element li:hover,
+.tabs__element li:focus-visible {
   outline: none;
   -o-border-image: linear-gradient(150deg, rgb(209, 10, 66) 0%, rgb(0, 65, 202) 100%) 1;
   border-image: linear-gradient(150deg, rgb(209, 10, 66) 0%, rgb(0, 65, 202) 100%) 1;
 }
 
-.tabs__item:hover .tabs__link,
-.tabs__item:focus-visible .tabs__link {
+.tabs__element li:hover .tabs__link,
+.tabs__element li:focus-visible .tabs__link {
   color: #ffffff;
   background: -webkit-gradient(linear, left top, right top, from(rgb(237, 2, 51)), to(rgb(0, 62, 183)));
   background: linear-gradient(90deg, rgb(237, 2, 51) 0%, rgb(0, 62, 183) 100%);
   border: none;
 }
 
-.tabs__item:hover .tabs__link:active,
-.tabs__item:focus-visible .tabs__link:active {
+.tabs__element li:hover .tabs__link:active,
+.tabs__element li:focus-visible .tabs__link:active {
   color: rgba(255, 255, 255, 0.7);
+}
+
+.tabs--unset .tabs__element {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.tabs__title h3 {
+  margin: 0;
+  font-size: 26px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 700;
+  line-height: 110.16%;
+}
+
+.tabs__title span {
+  color: #495a7d;
 }
 
 .tabs__text-price {
   display: block;
   position: relative;
-  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   min-width: 203px;
   min-height: 82px;
@@ -1238,6 +1238,7 @@ button,
 
 .accordion__element {
   border-bottom: 1px solid rgba(28, 51, 116, 0.2);
+  padding: 33px 0 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1253,58 +1254,8 @@ button,
   margin: 0;
 }
 
-.accordion__element br {
+.accordion__element h3 br {
   display: none;
-}
-
-.accordion__element summary {
-  position: relative;
-  padding: 33px 0 21px;
-  list-style-type: none;
-}
-
-.accordion__element span {
-  position: absolute;
-  content: "";
-  width: 42px;
-  height: 42px;
-  background-color: transparent;
-  border: 1px solid #102654;
-  top: 25px;
-  right: 0;
-  border-radius: 50%;
-}
-
-.accordion__element span::after,
-.accordion__element span::before {
-  position: absolute;
-  content: "";
-  width: 17px;
-  height: 1px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  background-color: #102654;
-}
-
-.accordion__element span::before {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.accordion__element[open] span::before {
-  display: none;
-}
-
-.accordion__element[open] span {
-  background-color: #102654;
-}
-
-.accordion__element[open] span::after {
-  background-color: #ffffff;
 }
 
 .accordion__element:first-child {
@@ -1314,18 +1265,61 @@ button,
 .accordion__element p {
   padding-right: 200px;
   font-size: 18px;
-  font-family: "Roboto Light", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 300;
-  line-height: 26px;
-  margin: -9px 0 23px;
+  line-height: 22px;
+  margin: 14px 0 0;
 }
 
-.accordion__element--limit summary {
-  padding: 44px 0 28px;
+.accordion__element--season-ticket {
+  padding-bottom: 15px;
 }
 
-.accordion__element--limit span {
-  top: 36px;
+.accordion__element--limit {
+  padding: 43px 0 24px;
+}
+
+.accordion__element.is-active .accordion__button {
+  background-color: #102654;
+}
+
+.accordion__element.is-active .accordion__button::after {
+  background-color: #ffffff;
+}
+
+.accordion__element.is-active .accordion__button::before {
+  display: none;
+}
+
+.accordion__button {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #102654;
+  margin-left: auto;
+  margin-top: -8px;
+}
+
+.accordion__button::after,
+.accordion__button::before {
+  position: absolute;
+  content: "";
+  width: 17px;
+  height: 1px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: #102654;
+}
+
+.accordion__button::before {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 [data-accordion=element].is-active > [data-accordion=content] {
@@ -1392,7 +1386,7 @@ button,
 }
 
 .gym p {
-  font-family: "Roboto Light", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 300;
   margin-bottom: 0;
 }
@@ -1670,7 +1664,7 @@ button,
 .trainers__swiper-slide h3 {
   color: #ffffff;
   font-size: 18px;
-  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   line-height: 21px;
   margin: auto 0 0;
@@ -1886,7 +1880,7 @@ button,
   -ms-grid-row-span: 2;
   grid-row: 1/3;
   font-size: 71px;
-  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   line-height: 54px;
   background: linear-gradient(188deg, rgb(209, 10, 66) 0%, rgb(0, 65, 202) 100%);
@@ -1904,7 +1898,7 @@ button,
   -ms-grid-row-span: 1;
   grid-row: 1/2;
   font-size: 22px;
-  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   line-height: 22px;
   margin: 0;
@@ -1917,7 +1911,7 @@ button,
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
-  font-family: "Roboto Light", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   line-height: 22px;
   font-weight: 300;
   margin: 8px 0 0;
@@ -1981,7 +1975,7 @@ button,
 .advantages__item--simulators span {
   font-size: 26px;
   line-height: 26px;
-  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   color: #ffffff;
   margin-top: 18px;
@@ -2021,7 +2015,7 @@ button,
   width: 70px;
   font-size: 12px;
   line-height: 14px;
-  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   letter-spacing: 0.6px;
   text-transform: uppercase;
@@ -2067,7 +2061,7 @@ button,
 
 .stocks__info h3 {
   font-size: 28px;
-  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   line-height: 22px;
   margin: 0 0 15px;
@@ -2075,7 +2069,7 @@ button,
 
 .stocks__info span {
   font-size: 70px;
-  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   line-height: 50px;
 }
@@ -2136,7 +2130,7 @@ button,
   font-size: 26px;
   line-height: 20px;
   margin: 0 0 10px;
-  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
 }
 
@@ -2237,7 +2231,7 @@ button,
 }
 
 .reviews h3 {
-  margin-bottom: 15px;
+  margin: 0 0 15px;
   font-size: 20px;
   line-height: 23px;
 }
@@ -2355,7 +2349,7 @@ button,
 }
 
 .free-lesson h2 {
-  margin: 0 0 19px;
+  margin: 0 0 6px;
   letter-spacing: 2.3px;
 }
 
@@ -2375,11 +2369,11 @@ button,
 
 .free-lesson input {
   font-size: 14px;
-  font-family: "Roboto Regular", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 400;
   line-height: 16px;
   width: 190px;
-  padding: 10px 10px 10px 0;
+  padding: 10px 10px 0 0;
   border: 2px solid transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   background-color: transparent;
@@ -2418,7 +2412,7 @@ button,
 
 .free-lesson input:active,
 .free-lesson input:focus-visible {
-  padding-left: 10px;
+  padding: 10px;
   outline: 1px solid #ffffff;
 }
 
@@ -2473,7 +2467,7 @@ button,
 
 .contacts {
   width: 50vw;
-  padding: 56px 0 68px 9%;
+  padding: 56px 0 60px 9%;
 }
 
 .contacts h2 {
@@ -2492,14 +2486,14 @@ button,
 
 .contacts__item {
   width: 230px;
-  padding-bottom: 23px;
+  padding-bottom: 15px;
   list-style-type: none;
 }
 
 .contacts__item h3 {
   font-size: 16px;
   line-height: 19px;
-  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   margin: 0 0 7px;
 }
@@ -2519,6 +2513,12 @@ button,
 .contacts__item:last-child,
 .contacts__item:nth-last-child(2) {
   padding: 0;
+}
+
+@media (max-width: 1268px) {
+  .contacts__item:nth-child(2n+1) {
+    margin-right: 32px;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -2627,7 +2627,7 @@ button,
     min-height: 1424px;
   }
 
-  .tabs__list {
+  .tabs__element ul {
     -ms-grid-columns: 65.2%;
     grid-template-columns: 65.2%;
     -webkit-box-pack: center;
@@ -2640,16 +2640,16 @@ button,
     max-width: 79.65%;
   }
 
-  .accordion__element summary {
-    padding-bottom: 25px;
+  .accordion__element {
+    padding-bottom: 26px;
   }
 
-  .accordion__element--schedule summary {
-    padding-bottom: 28px;
+  .accordion__element--schedule {
+    padding-bottom: 24px;
   }
 
-  .accordion__element--coolers summary {
-    padding-bottom: 30px;
+  .accordion__element--trainers {
+    padding-top: 25px;
   }
 
   .accordion__element--trainers h3 {
@@ -2660,18 +2660,10 @@ button,
     margin-top: 5px;
   }
 
-  .accordion__element--trainers summary {
-    padding-top: 27px;
-    padding-bottom: 54px;
-  }
-
-  .accordion__element--trainers span {
-    top: 35px;
-  }
-
   .accordion__element p {
     padding-right: 156px;
     line-height: 25px;
+    margin-top: 6px;
   }
 
   .main {
@@ -3137,7 +3129,7 @@ button,
 
   .contacts {
     width: 100vw;
-    padding: 60px 0 67px;
+    padding: 60px 0 62px;
   }
 
   .contacts__list {
@@ -3159,7 +3151,7 @@ button,
 
   .contacts__item {
     width: 53.09%;
-    padding-bottom: 26px;
+    padding-bottom: 22px;
   }
 
   .contacts__item:nth-child(2n) {
@@ -3255,7 +3247,7 @@ button,
 
   .source {
     margin-left: 0;
-    margin-bottom: 51px;
+    margin-bottom: 45px;
     display: block;
   }
 
@@ -3323,34 +3315,40 @@ button,
     min-height: 1227px;
   }
 
-  .tabs__title h3 {
-    font-size: 22px;
-  }
-
-  .tabs__title span {
-    margin-bottom: 42px;
-  }
-
-  .tabs__list {
+  .tabs__element ul {
     -ms-grid-columns: auto;
     grid-template-columns: auto;
     row-gap: 35px;
   }
 
-  .tabs__item {
+  .tabs__element li {
     min-height: 384px;
     padding: 44px 11.25vw 49px;
   }
 
+  .tabs__title h3 {
+    font-size: 22px;
+    margin-bottom: 7px;
+  }
+
   .tabs__text-price p {
+    top: 43px;
     font-size: 80px;
     line-height: 58px;
   }
 
+  .tabs__text-price span::after {
+    width: 24px;
+    height: 33px;
+    background-image: url("../img/season-tickets/ruble-mobile.svg");
+  }
+
   .tabs__text-price span {
+    top: 74px;
+    width: 132px;
+    padding-right: 34px;
     font-size: 48px;
     line-height: 36px;
-    margin-left: 5px;
   }
 
   .tabs__text-price {
@@ -3363,18 +3361,7 @@ button,
     max-width: 82.07%;
   }
 
-  .accordion__element span {
-    width: 32px;
-    height: 32px;
-    top: 35px;
-  }
-
-  .accordion__element span::after,
-  .accordion__element span::before {
-    width: 12px;
-  }
-
-  .accordion__element summary {
+  .accordion__element {
     padding: 20px 0 22px;
   }
 
@@ -3382,20 +3369,22 @@ button,
     padding-right: 0;
   }
 
-  .accordion__element--center h3 {
-    max-width: 83%;
-  }
-
-  .accordion__element--center span,
-  .accordion__element--child span {
-    top: 25px;
-  }
-
   .accordion__element p {
     font-size: 16px;
     line-height: 21px;
     padding: 0;
-    margin-bottom: 26px;
+    margin-top: 16px;
+  }
+
+  .accordion__button {
+    width: 32px;
+    height: 32px;
+    margin: auto 0 auto auto;
+  }
+
+  .accordion__button::after,
+  .accordion__button::before {
+    width: 12px;
   }
 
   .main {
@@ -3585,6 +3574,10 @@ button,
     padding: 54px 54px 46px;
   }
 
+  .stocks h2 {
+    margin-bottom: 44px;
+  }
+
   .stocks {
     padding: 64px 0 70px;
   }
@@ -3614,7 +3607,7 @@ button,
   }
 
   .questions-and-answers {
-    padding: 72px 0 70px;
+    padding: 69px 0 70px;
   }
 
   .questions-and-answers .tabs__controls {
@@ -3697,6 +3690,7 @@ button,
   .free-lesson h2 {
     letter-spacing: 0.96px;
     width: 90.63%;
+    margin-bottom: 12px;
   }
 
   .free-lesson .btn {
@@ -3731,6 +3725,7 @@ button,
 
   .contacts__item {
     width: 100%;
+    padding-bottom: 27px;
   }
 
   .contacts__item:nth-child(2n+1) {
@@ -3813,7 +3808,7 @@ button,
 }
 
 @media (max-width: 350px) {
-  .accordion__element br {
+  .accordion__element h3 br {
     display: block;
   }
 }
