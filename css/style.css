@@ -1043,6 +1043,8 @@ button,
 
 [data-tabs=element] {
   position: absolute;
+  visibility: hidden;
+  opacity: 0;
   -webkit-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
   transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
 }
@@ -1061,50 +1063,48 @@ button,
   opacity: 1;
 }
 
-.tabs {
-  max-width: 100%;
-}
-
 .tabs__controls {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: 341px;
+  gap: 20px 47px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin: 0 auto 39px;
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
 }
 
 .tabs__control {
   position: relative;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  opacity: 0.5;
+  padding: 16px 0 9px;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 20px;
-  padding: 19px 0 15px;
+  line-height: 30px;
+  color: rgba(16, 38, 84, 0.5);
   background: transparent;
   border: none;
-  text-transform: lowercase;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+.tabs__control.is-active,
+.tabs__control:hover,
+.tabs__control:focus-visible {
+  outline: none;
+  color: #102654;
+  border-color: #d10a42;
+  padding-top: 15px;
+  margin-bottom: -2px;
 }
 
 .tabs__control:disabled {
   opacity: 0.7;
-}
-
-.tabs__content {
-  -webkit-transition: height 0.3s;
-  transition: height 0.3s;
-  min-height: 448px;
 }
 
 .tabs__element {
@@ -1114,13 +1114,13 @@ button,
 .tabs__element ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto;
-  grid-template-columns: auto auto auto;
-  -webkit-column-gap: 40px;
-  -moz-column-gap: 40px;
-  column-gap: 40px;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 100%;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .tabs__element li {
@@ -1131,19 +1131,17 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 448px;
-  padding: 56px 70px 62px;
-  background-color: #ffffff;
-  list-style-type: none;
+  padding: 56px 30px 62px;
   text-align: center;
+  background-color: #ffffff;
   border: 7px solid transparent;
 }
 
 .tabs__element li:hover,
 .tabs__element li:focus-visible {
-  outline: none;
   -o-border-image: linear-gradient(150deg, rgb(209, 10, 66) 0%, rgb(0, 65, 202) 100%) 1;
   border-image: linear-gradient(150deg, rgb(209, 10, 66) 0%, rgb(0, 65, 202) 100%) 1;
+  outline: none;
 }
 
 .tabs__element li:hover .tabs__link,
@@ -1151,7 +1149,6 @@ button,
   color: #ffffff;
   background: -webkit-gradient(linear, left top, right top, from(rgb(237, 2, 51)), to(rgb(0, 62, 183)));
   background: linear-gradient(90deg, rgb(237, 2, 51) 0%, rgb(0, 62, 183) 100%);
-  border: none;
 }
 
 .tabs__element li:hover .tabs__link:active,
@@ -1159,16 +1156,9 @@ button,
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs--unset .tabs__element {
-  height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
 .tabs__title h3 {
-  margin: 0;
+  margin: 0 0 10px;
   font-size: 26px;
-  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   line-height: 110.16%;
 }
@@ -1178,105 +1168,124 @@ button,
 }
 
 .tabs__text-price {
-  display: block;
   position: relative;
-  font-family: "Roboto", "Arial", sans-serif;
-  font-weight: 700;
-  min-width: 203px;
-  min-height: 82px;
-}
-
-.tabs__text-price p {
-  position: absolute;
-  display: block;
-  width: 203px;
-  height: 69px;
-  top: 60px;
-  left: 0;
-  right: 0;
-  color: #e8e8e8;
-  font-size: 100px;
-  line-height: 72px;
-  margin: 0 auto;
-  background-color: #ffffff;
+  padding: 66px 0 33px;
 }
 
 .tabs__text-price span {
   position: absolute;
-  display: block;
-  width: 168px;
-  height: 42px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  color: #103aae;
-  font-size: 60px;
-  line-height: 46px;
-  top: 96px;
-  margin: 0 auto;
-  padding-right: 46px;
+  display: inline-block;
+  top: 0;
+  left: 50%;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 150%;
+  color: rgba(232, 232, 232, 0.5);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
-.tabs__text-price span::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto 0;
-  width: 30px;
-  height: 42px;
+.tabs__text-price p {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin: 0;
+  padding-right: 46px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 150%;
+  color: #103aae;
   background-image: url("../img/season-tickets/ruble.svg");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 30px 42px;
 }
 
 .tabs__link {
   width: 206px;
-  min-height: 64px;
   margin: auto auto 0;
+  padding: 26px 20px;
   border: 2px solid #102654;
 }
 
-.accordion__element {
-  border-bottom: 1px solid rgba(28, 51, 116, 0.2);
-  padding: 33px 0 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.accordion {
   width: 100%;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
-.accordion__element h3 {
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 28px;
-  margin: 0;
-}
-
-.accordion__element h3 br {
-  display: none;
-}
-
-.accordion__element:first-child {
+.accordion__element {
+  padding: 33px 0 30px;
   border-top: 1px solid rgba(28, 51, 116, 0.2);
 }
 
-.accordion__element p {
-  padding-right: 200px;
-  font-size: 18px;
-  font-family: "Roboto", "Arial", sans-serif;
+.accordion__element:last-child {
+  border-bottom: 1px solid rgba(28, 51, 116, 0.2);
+}
+
+.accordion__header {
+  position: relative;
+}
+
+.accordion__element h3 {
+  margin: 0;
+  padding-right: 50px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.accordion__element.is-active h3 {
+  margin-bottom: 13px;
+}
+
+.accordion__element br {
+  display: none;
+}
+
+.accordion__content p {
+  max-width: 660px;
+  margin: 0;
   font-weight: 300;
-  line-height: 22px;
-  margin: 14px 0 0;
+  font-size: 18px;
+  line-height: 25px;
 }
 
-.accordion__element--season-ticket {
-  padding-bottom: 15px;
+.accordion__content p:not(:last-child) {
+  margin-bottom: 20px;
 }
 
-.accordion__element--limit {
-  padding: 43px 0 24px;
+.accordion__button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 42px;
+  height: 42px;
+  background-color: transparent;
+  border: 1px solid #102654;
+  border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.accordion__button::after,
+.accordion__button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 17px;
+  height: 1px;
+  background-color: #102654;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.accordion__button::before {
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+  -ms-transform: translate(-50%, -50%) rotate(90deg);
+  transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .accordion__element.is-active .accordion__button {
@@ -1289,37 +1298,6 @@ button,
 
 .accordion__element.is-active .accordion__button::before {
   display: none;
-}
-
-.accordion__button {
-  position: relative;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background-color: transparent;
-  border: 1px solid #102654;
-  margin-left: auto;
-  margin-top: -8px;
-}
-
-.accordion__button::after,
-.accordion__button::before {
-  position: absolute;
-  content: "";
-  width: 17px;
-  height: 1px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  background-color: #102654;
-}
-
-.accordion__button::before {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
 }
 
 [data-accordion=element].is-active > [data-accordion=content] {
@@ -1502,15 +1480,6 @@ button,
 .season-tickets h2 {
   margin: 0;
   text-align: center;
-}
-
-.season-tickets .tabs__control.is-active,
-.season-tickets .tabs__control:hover,
-.season-tickets .tabs__control:focus-visible {
-  outline: none;
-  opacity: 1;
-  border-bottom: 2px solid #d10a42;
-  padding-bottom: 13px;
 }
 
 .season-tickets::after {
@@ -2148,7 +2117,11 @@ button,
   background-color: #f8f9fc;
 }
 
-.questions-and-answers .tabs {
+.questions-and-answers h2 {
+  margin: 0 0 35px;
+}
+
+.questions-and-answers__tabs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2160,11 +2133,14 @@ button,
   align-items: flex-start;
 }
 
-.questions-and-answers .tabs__element {
-  background-color: #f8f9fc;
-}
-
-.questions-and-answers .tabs__controls {
+.questions-and-answers__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 260px;
   min-height: 246px;
   -webkit-box-orient: vertical;
@@ -2175,7 +2151,7 @@ button,
   border: none;
 }
 
-.questions-and-answers .tabs__control {
+.questions-and-answers__control {
   padding: 17px 0 14px;
   font-size: 18px;
   line-height: 21px;
@@ -2185,17 +2161,22 @@ button,
   border: 1px solid rgba(16, 38, 84, 0.2);
 }
 
-.questions-and-answers .tabs__control:hover,
-.questions-and-answers .tabs__control:focus-visible {
+.questions-and-answers__control:hover,
+.questions-and-answers__control:focus-visible {
   outline: none;
   border-color: #102654;
 }
 
-.questions-and-answers .tabs__control:disabled {
+.questions-and-answers__control:disabled {
   opacity: 0.6;
 }
 
-.questions-and-answers .tabs__control.is-active {
+.questions-and-answers__element {
+  width: 100%;
+  background-color: #f8f9fc;
+}
+
+.questions-and-answers__control.is-active {
   color: #ffffff;
   pointer-events: none;
   background: -webkit-gradient(linear, left top, right top, from(rgb(237, 2, 51)), to(rgb(0, 62, 183)));
@@ -2203,18 +2184,13 @@ button,
   border-color: transparent;
 }
 
-.questions-and-answers .tabs__content {
+.questions-and-answers__content {
   width: 860px;
   margin-top: 1px;
 }
 
-.questions-and-answers__title {
-  margin: 0 0 35px;
-}
-
 .reviews {
-  padding: 126px 0 120px;
-  margin-top: 789px;
+  padding: 117px 0 120px;
 }
 
 .reviews h2 {
@@ -2615,55 +2591,47 @@ button,
   }
 
   .tabs__controls {
-    min-width: 332px;
+    gap: 20px 55px;
     margin-bottom: 44px;
   }
 
+  .tabs__control.is-active,
+  .tabs__control:hover,
+  .tabs__control:focus-visible {
+    padding-top: 14px;
+    margin-bottom: -1px;
+  }
+
   .tabs__control {
+    padding-top: 15px;
     font-size: 18px;
   }
 
-  .tabs__content {
-    min-height: 1424px;
-  }
-
   .tabs__element ul {
-    -ms-grid-columns: 65.2%;
-    grid-template-columns: 65.2%;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    row-gap: 40px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
 
-  .accordion__element h3 {
-    max-width: 79.65%;
+  .tabs__element li {
+    width: 100%;
+    max-width: 442px;
+  }
+
+  .tabs__link {
+    padding: 25px 20px 26px;
   }
 
   .accordion__element {
-    padding-bottom: 26px;
+    padding: 31px 0 28px;
   }
 
-  .accordion__element--schedule {
-    padding-bottom: 24px;
+  .accordion__element.is-active h3 {
+    margin-bottom: 15px;
   }
 
-  .accordion__element--trainers {
-    padding-top: 25px;
-  }
-
-  .accordion__element--trainers h3 {
-    padding-right: 62px;
-  }
-
-  .accordion__element--trainers .accordion__button {
-    margin-top: 5px;
-  }
-
-  .accordion__element p {
-    padding-right: 156px;
-    line-height: 25px;
-    margin-top: 6px;
+  .accordion__content p {
+    max-width: 550px;
   }
 
   .main {
@@ -3019,50 +2987,47 @@ button,
     width: 47.79%;
   }
 
-  .questions-and-answers {
-    padding: 99px 0 100px;
+  .questions-and-answers h2 {
+    text-align: center;
+    margin-bottom: 40px;
   }
 
-  .questions-and-answers .tabs {
+  .questions-and-answers {
+    padding: 99px 0 97px;
+  }
+
+  .questions-and-answers__tabs {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
   }
 
-  .questions-and-answers .tabs__controls {
+  .questions-and-answers__controls {
     width: 100%;
     min-height: 54px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     margin-bottom: 37px;
   }
 
-  .questions-and-answers .tabs__control {
+  .questions-and-answers__control {
     min-width: 162px;
   }
 
-  .questions-and-answers .tabs__content {
+  .questions-and-answers__content {
     width: 100%;
     min-height: 466px;
   }
 
-  .questions-and-answers__title {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-
   .reviews h2 {
-    margin-bottom: 41px;
+    margin-bottom: 38px;
   }
 
   .reviews {
-    padding: 152px 0 100px;
+    padding: 90px 0 100px;
   }
 
   .reviews__swiper {
@@ -3129,7 +3094,7 @@ button,
 
   .contacts {
     width: 100vw;
-    padding: 60px 0 62px;
+    padding: 60px 0 64px;
   }
 
   .contacts__list {
@@ -3303,27 +3268,27 @@ button,
   }
 
   .tabs__controls {
-    min-width: 290px;
+    gap: 20px 45px;
     margin-bottom: 35px;
   }
 
+  .tabs__control.is-active,
+  .tabs__control:hover,
+  .tabs__control:focus-visible {
+    padding-top: 11px;
+  }
+
   .tabs__control {
+    padding: 12px 0 9px;
     font-size: 16px;
   }
 
-  .tabs__content {
-    min-height: 1227px;
-  }
-
   .tabs__element ul {
-    -ms-grid-columns: auto;
-    grid-template-columns: auto;
-    row-gap: 35px;
+    gap: 35px;
   }
 
   .tabs__element li {
-    min-height: 384px;
-    padding: 44px 11.25vw 49px;
+    padding: 44px 30px 48px;
   }
 
   .tabs__title h3 {
@@ -3331,55 +3296,42 @@ button,
     margin-bottom: 7px;
   }
 
-  .tabs__text-price p {
-    top: 43px;
-    font-size: 80px;
-    line-height: 58px;
-  }
-
-  .tabs__text-price span::after {
-    width: 24px;
-    height: 33px;
-    background-image: url("../img/season-tickets/ruble-mobile.svg");
+  .tabs__text-price {
+    padding: 56px 0 30px;
   }
 
   .tabs__text-price span {
-    top: 74px;
-    width: 132px;
-    padding-right: 34px;
-    font-size: 48px;
-    line-height: 36px;
+    top: 12px;
+    font-size: 80px;
   }
 
-  .tabs__text-price {
-    min-height: 67px;
+  .tabs__text-price p {
+    padding-right: 34px;
+    font-size: 48px;
+    background-size: 24px 33px;
+  }
+
+  .accordion__element {
+    padding: 20px 0 21px;
   }
 
   .accordion__element h3 {
     font-size: 18px;
     line-height: 21px;
-    max-width: 82.07%;
   }
 
-  .accordion__element {
-    padding: 20px 0 22px;
+  .accordion__element.is-active h3 {
+    margin-bottom: 15px;
   }
 
-  .accordion__element--trainers h3 {
-    padding-right: 0;
-  }
-
-  .accordion__element p {
+  .accordion__content p {
     font-size: 16px;
-    line-height: 21px;
-    padding: 0;
-    margin-top: 16px;
+    line-height: 22px;
   }
 
   .accordion__button {
     width: 32px;
     height: 32px;
-    margin: auto 0 auto auto;
   }
 
   .accordion__button::after,
@@ -3443,13 +3395,8 @@ button,
     display: none;
   }
 
-  .season-tickets .tabs__controls {
-    min-width: 290px;
-    width: 90px;
-  }
-
   .season-tickets__wrapper {
-    padding: 64px 0;
+    padding: 64px 0 68px;
   }
 
   .super-games-and-trainers {
@@ -3606,34 +3553,34 @@ button,
     text-align: center;
   }
 
+  .questions-and-answers h2 {
+    margin-bottom: 31px;
+  }
+
   .questions-and-answers {
     padding: 69px 0 70px;
   }
 
-  .questions-and-answers .tabs__controls {
+  .questions-and-answers__controls {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    gap: 8px 9px;
+    margin-bottom: 28px;
   }
 
-  .questions-and-answers .tabs__control {
+  .questions-and-answers__control {
     font-size: 16px;
     line-height: 19px;
-    min-width: 141px;
-    margin-bottom: 8px;
+    min-width: 140px;
     padding: 12px 0;
   }
 
-  .questions-and-answers .tabs__content {
+  .questions-and-answers__content {
     min-height: 480px;
   }
 
-  .questions-and-answers__title {
-    margin-bottom: 31px;
-  }
-
   .reviews h2 {
-    margin-bottom: 43px;
+    margin-bottom: 41px;
   }
 
   .reviews img {
@@ -3655,7 +3602,7 @@ button,
   }
 
   .reviews {
-    padding: 87px 0 70px;
+    padding: 62px 0 70px;
   }
 
   .reviews__swiper {
@@ -3808,7 +3755,7 @@ button,
 }
 
 @media (max-width: 350px) {
-  .accordion__element h3 br {
+  .accordion__element br {
     display: block;
   }
 }
