@@ -8,8 +8,6 @@
     line-height: 96%;
     letter-spacing: 2.46px;
     margin: 0 0 0 14px;
-    grid-column: 1/2;
-    grid-row: 1/6;
 
     @include vp-1199 {
       margin-left: 8px;
@@ -50,6 +48,7 @@
   dd {
     font-size: 40px;
     line-height: 30px;
+    font-weight: 700;
     grid-column: 2/3;
     display: flex;
     align-self: center;
@@ -94,7 +93,7 @@
   column-gap: 53px;
 
   p {
-    margin: -45px 0 0;
+    margin: 0;
     display: block;
     font-size: 18px;
     border-bottom: 1px solid $color-default-white;
@@ -148,6 +147,11 @@
 }
 
 .super-games__image-wrapper {
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+
   @include vp-1199 {
     width: 56.93%;
 

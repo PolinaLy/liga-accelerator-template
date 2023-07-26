@@ -14,6 +14,7 @@
   letter-spacing: 0.6px;
   text-transform: uppercase;
   transition: opacity $trans-default;
+  user-select: none;
 
   &:focus-visible {
     outline: none;
@@ -21,11 +22,6 @@
 
   &:disabled {
     opacity: 0.5;
-
     pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
   }
 }

@@ -13,15 +13,30 @@ export const initSwiper = function () {
   }
 
   new Swiper('.trainers__swiper', {
+    navigation: {
+      nextEl: '.trainers__swiper .slider__button--next',
+      prevEl: '.trainers__swiper .slider__button--prev',
+    },
+    // Задает класс активным слайдам
+    watchSlidesProgress: true,
+    // Задаем класс активным слайдам
+    slideVisibleClass: 'slider__slide--visible',
+    // отключение скролла
+    simulateTouch: false,
+
+    // Бесконечная прокрутка
     loop: true,
+
     breakpoints: {
       320: {
+        // Количество слайдов на странице
         slidesPerView: 1,
-        spaceBetween: 0,
+        // порядковый номер первого слайда
         initialSlide: 2,
       },
       768: {
         slidesPerView: 2,
+        // Отступ между слайдами
         spaceBetween: 30,
         initialSlide: 2,
       },
@@ -30,11 +45,6 @@ export const initSwiper = function () {
         spaceBetween: 40,
       },
     },
-
-    navigation: {
-      nextEl: '.trainers__swiper-button--next',
-      prevEl: '.trainers__swiper-button--prev',
-    },
   });
 
   new Swiper('.reviews__swiper', {
@@ -42,5 +52,11 @@ export const initSwiper = function () {
       nextEl: '.reviews__swiper-button--next',
       prevEl: '.reviews__swiper-button--prev',
     },
+    // Задает класс активным слайдам
+    watchSlidesProgress: true,
+    // Задаем класс активным слайдам
+    slideVisibleClass: 'slider__slide--visible',
+    // отключение скролла
+    simulateTouch: false,
   });
 };

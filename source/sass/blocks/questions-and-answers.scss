@@ -17,7 +17,7 @@
   }
 
   @include vp-1199 {
-    padding: 99px 0 97px;
+    padding: 101px 0 97px;
   }
 
   @include vp-767 {
@@ -64,9 +64,12 @@
   font-size: 18px;
   line-height: 21px;
   font-weight: 500px;
+  background: transparent;
   text-transform: inherit;
   opacity: 1;
   border: 1px solid rgba(16, 38, 84, 0.2);
+  cursor: pointer;
+  user-select: none;
 
   @include vp-1199 {
     min-width: 162px;
@@ -83,6 +86,12 @@
   &:focus-visible {
     outline: none;
     border-color: $color-default-sapphire;
+  }
+
+  &:active {
+    color: $color-default-white;
+    background: linear-gradient(90deg, #ed0233 0, #003eb7 100%);
+    border-color: transparent;
   }
 
   &:disabled {

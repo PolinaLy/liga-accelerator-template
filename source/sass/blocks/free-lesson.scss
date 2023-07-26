@@ -54,7 +54,7 @@
     line-height: 16px;
     width: 190px;
     padding: 10px 10px 0 0;
-    border: 2px solid transparent;
+    border: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     background-color: transparent;
     color: $color-default-white;
@@ -66,13 +66,11 @@
 
     &:hover {
       border-color: $color-default-white;
-      padding-bottom: 9px;
     }
 
     &:active,
     &:focus-visible {
-      padding: 10px;
-      outline: 1px solid $color-default-white;
+      border: 1px solid $color-default-white;
 
       &::placeholder {
         color: transparent;
@@ -93,7 +91,6 @@
 
     @include vp-767 {
       width: 100%;
-      padding-bottom: 6px;
     }
   }
 
@@ -106,12 +103,13 @@
       justify-content: space-between;
       flex-wrap: wrap;
       width: 61.46%;
+      max-width: 550px;
       margin-left: 17.27%;
     }
   }
 
   @include vp-767 {
-    padding: 63px 0 67px;
+    padding: 63px 0 68px;
 
     form {
       width: 90.63%;

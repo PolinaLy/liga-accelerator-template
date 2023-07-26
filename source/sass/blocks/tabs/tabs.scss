@@ -111,6 +111,7 @@
       .tabs__link {
         color: $color-default-white;
         background: $cobalt-btn-to-bottom;
+        border: transparent;
 
         &:active {
           color: rgba(255, 255, 255, 0.7);
@@ -193,7 +194,23 @@
   padding: 26px 20px;
   border: 2px solid $color-default-sapphire;
 
+  &:hover,
+  &:focus-visible,
+  &:active {
+    color: $color-default-white;
+    background: $cobalt-btn-to-bottom;
+    border: transparent;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
   @include vp-1199 {
     padding: 25px 20px 26px;
+  }
+
+  @include vp-767 {
+    width: 94.92%;
   }
 }

@@ -23,7 +23,7 @@
       font-size: 42px;
       letter-spacing: 1.26px;
       line-height: normal;
-      margin: 0 0 0 -16px;
+      margin: 0;
     }
 
     @include vp-767 {
@@ -148,6 +148,7 @@
   height: 100px;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -205,7 +206,7 @@
   span {
     width: 72px;
     height: 72px;
-    background: var(--1, linear-gradient(240deg, $color-torch-red 0%, #003eb7 100%));
+    background: var(--1, linear-gradient(240deg, #b80027 0%, #003d85 100%));
     border-radius: 50%;
 
     @include vp-1199 {
