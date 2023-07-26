@@ -3596,7 +3596,7 @@ button,
   }
 
   .questions-and-answers {
-    padding: 69px 0 70px;
+    padding: 69px 0 68px;
   }
 
   .questions-and-answers__controls {
@@ -3682,7 +3682,7 @@ button,
   }
 
   .free-lesson .btn {
-    margin-top: 25px;
+    margin-top: 26px;
   }
 
   .free-lesson input {
@@ -3744,7 +3744,7 @@ button,
 
 @media screen and (max-width: 767px) {
   .custom-input {
-    padding: 4px 0 48px;
+    padding: 4px 0 8px;
     width: 100%;
   }
 
