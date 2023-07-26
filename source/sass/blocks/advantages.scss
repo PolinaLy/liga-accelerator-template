@@ -243,10 +243,14 @@
     span:first-child {
       font-size: 74px;
       color: $color-default-white;
-      margin: 15px 0;
+      margin: 15px 0 26px;
 
       @include vp-1199 {
         margin: 15px 19px;
+      }
+
+      @include vp-767 {
+        margin: 12px 0 25px;
       }
     }
 
@@ -285,13 +289,15 @@
     @include vp-767 {
       width: 100vw;
       padding: 54px 54px 46px;
-
     }
   }
 
   @include vp-767 {
     display: block;
-    padding: 0 45px;
+
+    &:not(&--simulators) {
+      padding: 0 45px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 45px;

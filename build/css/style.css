@@ -2701,11 +2701,16 @@ button,
 .advantages__item--simulators span:first-child {
   font-size: 74px;
   color: #ffffff;
-  margin: 15px 0;
+  margin: 15px 0 26px;
 }
 @media (max-width: 1199px) {
   .advantages__item--simulators span:first-child {
     margin: 15px 19px;
+  }
+}
+@media (max-width: 767px) {
+  .advantages__item--simulators span:first-child {
+    margin: 12px 0 25px;
   }
 }
 .advantages__item--simulators span {
@@ -2755,6 +2760,8 @@ button,
 @media (max-width: 767px) {
   .advantages__item {
     display: block;
+  }
+  .advantages__item:not(.advantages__item--simulators) {
     padding: 0 45px;
   }
   .advantages__item:not(:last-child) {
