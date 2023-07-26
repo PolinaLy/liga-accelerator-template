@@ -1951,7 +1951,7 @@ button,
 .advantages__item--simulators span:first-child {
   font-size: 74px;
   color: #ffffff;
-  margin: 15px 0;
+  margin: 15px 0 26px;
 }
 
 .advantages__item--simulators span {
@@ -3522,6 +3522,10 @@ button,
     padding-right: 0;
   }
 
+  .advantages__item--simulators span:first-child {
+    margin: 12px 0 25px;
+  }
+
   .advantages__item--simulators span {
     margin-top: 11px;
   }
@@ -3533,6 +3537,9 @@ button,
 
   .advantages__item {
     display: block;
+  }
+
+  .advantages__item:not(.advantages__item--simulators) {
     padding: 0 45px;
   }
 
