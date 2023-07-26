@@ -1751,12 +1751,7 @@ button,
 }
 @media (max-width: 1199px) {
   .gym span {
-    margin: 0 0 35px;
-  }
-}
-@media (max-width: 767px) {
-  .gym span {
-    margin-bottom: 24px;
+    margin: auto;
   }
 }
 .gym p {
@@ -1764,9 +1759,15 @@ button,
   font-weight: 300;
   margin-bottom: 0;
 }
+@media (max-width: 1199px) {
+  .gym p {
+    margin-top: 36px;
+  }
+}
 @media (max-width: 767px) {
   .gym p {
     margin-right: 28px;
+    margin-top: 25px;
   }
 }
 .gym p + p {
@@ -1943,20 +1944,19 @@ button,
     background-size: 100%;
   }
 }
+@media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 1199px), (min-resolution: 144dpi) and (max-width: 1199px), (min-resolution: 1.5dppx) and (max-width: 1199px) {
+  .season-tickets::after {
+    background-image: url("../img/season-tickets/disks-tablet@2x.png");
+    width: 347px;
+    height: 444px;
+  }
+}
 @media (max-width: 1199px) {
   .season-tickets::after {
     width: 347px;
     height: 444px;
     bottom: -125px;
     background-image: url("../img/season-tickets/disks-tablet.png");
-  }
-}
-@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (min-resolution: 1.5dppx) {
-  .season-tickets::after {
-    background-image: url("../img/season-tickets/disks-tablet@2x.png");
-    width: 347px;
-    height: 444px;
-    background-size: 100%;
   }
 }
 @media (max-width: 767px) {
@@ -2122,6 +2122,11 @@ button,
     font-size: 12px;
     line-height: 14px;
     margin-top: -32px;
+  }
+}
+@media (max-width: 767px) {
+  .super-games__info p {
+    margin-top: -13px;
   }
 }
 @media (max-width: 1199px) {
@@ -2399,6 +2404,8 @@ button,
 .trainers__swiper-slide:focus-visible .trainers__swiper-content,
 .trainers__swiper-slide:hover .trainers__swiper-content {
     padding-top: 44px;
+    width: 226px;
+    margin: 0 auto;
   }
 }
 
@@ -2515,7 +2522,7 @@ button,
 @media (max-width: 1199px) {
   .advantages__item span:first-child {
     font-size: 58px;
-    line-height: 43px;
+    line-height: 46px;
   }
 }
 @media (max-width: 767px) {
@@ -2679,6 +2686,25 @@ button,
     grid-column: 2/3;
   }
 }
+@media (max-width: 767px) {
+  .advantages__item {
+    display: block;
+    padding: 0 45px;
+  }
+  .advantages__item:not(:last-child) {
+    margin-bottom: 45px;
+  }
+  .advantages__item:nth-child(2) {
+    margin-bottom: 36px;
+  }
+  .advantages__item:nth-child(2) h3 {
+    margin-bottom: 15px;
+  }
+  .advantages__item:nth-child(4) span:first-child {
+    margin-bottom: 7px;
+  }
+}
+
 .advantages__item--simulators {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2719,6 +2745,7 @@ button,
     font-size: 22px;
     line-height: 22px;
     margin-top: 21px;
+    margin-bottom: 19px;
   }
 }
 @media (max-width: 767px) {
@@ -2744,26 +2771,6 @@ button,
 @media (max-width: 767px) {
   .advantages__item--simulators {
     width: 100vw;
-  }
-}
-@media (max-width: 767px) {
-  .advantages__item {
-    display: block;
-    padding: 0 45px;
-  }
-  .advantages__item:not(:last-child) {
-    margin-bottom: 45px;
-  }
-  .advantages__item:nth-child(2) {
-    margin-bottom: 36px;
-  }
-  .advantages__item:nth-child(2) h3 {
-    margin-bottom: 15px;
-  }
-  .advantages__item:nth-child(4) span:first-child {
-    margin-bottom: 7px;
-  }
-  .advantages__item--simulators {
     padding: 54px 54px 46px;
   }
 }
