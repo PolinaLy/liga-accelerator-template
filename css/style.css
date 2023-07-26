@@ -1834,7 +1834,7 @@ button,
   -ms-grid-column-span: 1;
   grid-column: 3/4;
   border-bottom: 2px solid rgba(209, 10, 66, 0.2);
-  padding-bottom: 77px;
+  padding-bottom: 79px;
 }
 
 .advantages__item span {
@@ -1957,7 +1957,8 @@ button,
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   color: #ffffff;
-  margin-top: 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .stocks {
@@ -2221,7 +2222,7 @@ button,
 }
 
 .reviews {
-  padding: 117px 0 120px;
+  padding: 120px 0;
 }
 
 .reviews h2 {
@@ -3134,6 +3135,15 @@ button,
   }
 }
 
+@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (min-resolution: 1.5dppx) {
+  .season-tickets::after {
+    background-image: url("../img/season-tickets/disks-tablet@2x.png");
+    width: 347px;
+    height: 444px;
+    background-size: 100%;
+  }
+}
+
 @media (max-width: 767px) {
   body h2 {
     font-size: 32px;
@@ -3785,13 +3795,5 @@ button,
 @media (max-width: 350px) {
   .accordion__element br {
     display: block;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .season-tickets::after {
-    background-image: url("../img/season-tickets/disks-tablet@2x.png");
-    width: 347px;
-    height: 444px;
   }
 }
