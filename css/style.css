@@ -2680,7 +2680,11 @@ button,
   }
 
   .gym span {
-    margin: 0 0 35px;
+    margin: auto;
+  }
+
+  .gym p {
+    margin-top: 36px;
   }
 
   .gym p + p {
@@ -2870,7 +2874,7 @@ button,
 
   .advantages__item span:first-child {
     font-size: 58px;
-    line-height: 43px;
+    line-height: 46px;
   }
 
   .advantages__item h3 {
@@ -2928,6 +2932,7 @@ button,
     font-size: 22px;
     line-height: 22px;
     margin-top: 21px;
+    margin-bottom: 19px;
   }
 
   .advantages__item--simulators {
@@ -3115,12 +3120,11 @@ button,
   }
 }
 
-@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (min-resolution: 1.5dppx) {
+@media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 1199px), (min-resolution: 144dpi) and (max-width: 1199px), (min-resolution: 1.5dppx) and (max-width: 1199px) {
   .season-tickets::after {
     background-image: url("../img/season-tickets/disks-tablet@2x.png");
     width: 347px;
     height: 444px;
-    background-size: 100%;
   }
 }
 
@@ -3370,12 +3374,9 @@ button,
     padding: 0;
   }
 
-  .gym span {
-    margin-bottom: 24px;
-  }
-
   .gym p {
     margin-right: 28px;
+    margin-top: 25px;
   }
 
   .gym__text {
@@ -3405,6 +3406,10 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .super-games__info p {
+    margin-top: -13px;
   }
 
   .super-games__info {
@@ -3452,6 +3457,8 @@ button,
   .trainers__swiper-slide:focus-visible .trainers__swiper-content,
   .trainers__swiper-slide:hover .trainers__swiper-content {
     padding-top: 44px;
+    width: 226px;
+    margin: 0 auto;
   }
 
   .advantages h2 {
@@ -3511,14 +3518,6 @@ button,
     padding-right: 0;
   }
 
-  .advantages__item--simulators span {
-    margin-top: 11px;
-  }
-
-  .advantages__item--simulators {
-    width: 100vw;
-  }
-
   .advantages__item {
     display: block;
     padding: 0 45px;
@@ -3540,7 +3539,12 @@ button,
     margin-bottom: 7px;
   }
 
+  .advantages__item--simulators span {
+    margin-top: 11px;
+  }
+
   .advantages__item--simulators {
+    width: 100vw;
     padding: 54px 54px 46px;
   }
 
