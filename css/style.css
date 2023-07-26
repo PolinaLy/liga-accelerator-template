@@ -1845,7 +1845,7 @@ button,
   margin: 4px 0 0;
 }
 
-.advantages__item span:first-child {
+.advantages__item:not(.advantages__item--simulators) span:first-child {
   font-size: 71px;
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
@@ -2497,6 +2497,15 @@ button,
   padding: 0;
 }
 
+@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx) {
+  .season-tickets::after {
+    background-image: url("../img/season-tickets/disks-desktop@2x.png");
+    width: 287px;
+    height: 494px;
+    background-size: 100%;
+  }
+}
+
 @media (max-width: 1268px) {
   .contacts__item:nth-child(2n+1) {
     margin-right: 32px;
@@ -2736,6 +2745,7 @@ button,
     height: 444px;
     bottom: -125px;
     background-image: url("../img/season-tickets/disks-tablet.png");
+    background-size: 100%;
   }
 
   .season-tickets__wrapper {
@@ -2872,7 +2882,7 @@ button,
     padding: 0 45px;
   }
 
-  .advantages__item span:first-child {
+  .advantages__item:not(.advantages__item--simulators) span:first-child {
     font-size: 58px;
     line-height: 46px;
   }
@@ -2931,7 +2941,7 @@ button,
   .advantages__item--simulators span {
     font-size: 22px;
     line-height: 22px;
-    margin-top: 21px;
+    margin-top: 15px;
     margin-bottom: 19px;
   }
 
@@ -2946,7 +2956,11 @@ button,
     min-height: 239px;
     -ms-grid-column-align: center;
     justify-self: center;
-    padding: 48px 115px 40px;
+    padding: 42px 115px 33px;
+  }
+
+  .advantages__item--simulators p {
+    margin-top: 3px;
   }
 
   .stocks h2 {
@@ -3117,14 +3131,6 @@ button,
 
   .contacts__item:nth-child(2n+1) {
     margin-right: 44px;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 1199px), (min-resolution: 144dpi) and (max-width: 1199px), (min-resolution: 1.5dppx) and (max-width: 1199px) {
-  .season-tickets::after {
-    background-image: url("../img/season-tickets/disks-tablet@2x.png");
-    width: 347px;
-    height: 444px;
   }
 }
 
@@ -3482,12 +3488,12 @@ button,
     padding: 0;
   }
 
-  .advantages__item span:first-child {
-    line-height: 47px;
-  }
-
   .advantages__item span {
     margin: 2px 0 15px;
+  }
+
+  .advantages__item:not(.advantages__item--simulators) span:first-child {
+    line-height: 47px;
   }
 
   .advantages__item h3 {
@@ -3518,6 +3524,15 @@ button,
     padding-right: 0;
   }
 
+  .advantages__item--simulators span {
+    margin-top: 11px;
+  }
+
+  .advantages__item--simulators {
+    width: 100vw;
+    padding: 54px 54px 46px;
+  }
+
   .advantages__item {
     display: block;
     padding: 0 45px;
@@ -3537,15 +3552,6 @@ button,
 
   .advantages__item:nth-child(4) span:first-child {
     margin-bottom: 7px;
-  }
-
-  .advantages__item--simulators span {
-    margin-top: 11px;
-  }
-
-  .advantages__item--simulators {
-    width: 100vw;
-    padding: 54px 54px 46px;
   }
 
   .stocks h2 {
@@ -3784,9 +3790,8 @@ button,
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .season-tickets::after {
-    background-image: url("../img/season-tickets/disks-desktop@2x.png");
-    width: 287px;
-    height: 494px;
-    background-size: 100%;
+    background-image: url("../img/season-tickets/disks-tablet@2x.png");
+    width: 347px;
+    height: 444px;
   }
 }
