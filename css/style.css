@@ -3506,6 +3506,30 @@ button,
     margin-top: 0;
   }
 
+  .advantages__item {
+    display: block;
+  }
+
+  .advantages__item:not(.advantages__item--simulators) {
+    padding: 0 45px;
+  }
+
+  .advantages__item:not(:last-child) {
+    margin-bottom: 45px;
+  }
+
+  .advantages__item:nth-child(2) {
+    margin-bottom: 36px;
+  }
+
+  .advantages__item:nth-child(2) h3 {
+    margin-bottom: 15px;
+  }
+
+  .advantages__item:nth-child(4) span:first-child {
+    margin-bottom: 7px;
+  }
+
   .advantages__item--square {
     -webkit-box-ordinal-group: 0;
     -ms-flex-order: -1;
@@ -3533,30 +3557,6 @@ button,
   .advantages__item--simulators {
     width: 100vw;
     padding: 54px 54px 46px;
-  }
-
-  .advantages__item {
-    display: block;
-  }
-
-  .advantages__item:not(.advantages__item--simulators) {
-    padding: 0 45px;
-  }
-
-  .advantages__item:not(:last-child) {
-    margin-bottom: 45px;
-  }
-
-  .advantages__item:nth-child(2) {
-    margin-bottom: 36px;
-  }
-
-  .advantages__item:nth-child(2) h3 {
-    margin-bottom: 15px;
-  }
-
-  .advantages__item:nth-child(4) span:first-child {
-    margin-bottom: 7px;
   }
 
   .stocks h2 {
