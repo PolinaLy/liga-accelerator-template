@@ -1932,32 +1932,19 @@ button,
   content: "";
   width: 287px;
   height: 494px;
-  background-image: url("../img/season-tickets/disks-desktop.png");
+  background-image: -webkit-image-set(url("../img/season-tickets/disks-desktop.png") 1x, url("../img/season-tickets/disks-desktop@2x.png"));
+  background-image: image-set(url("../img/season-tickets/disks-desktop.png") 1x, url("../img/season-tickets/disks-desktop@2x.png"));
   right: 0;
   bottom: -149px;
-}
-@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx) {
-  .season-tickets::after {
-    background-image: url("../img/season-tickets/disks-desktop@2x.png");
-    width: 287px;
-    height: 494px;
-    background-size: 100%;
-  }
+  background-size: 100%;
 }
 @media (max-width: 1199px) {
   .season-tickets::after {
     width: 347px;
     height: 444px;
     bottom: -125px;
-    background-image: url("../img/season-tickets/disks-tablet.png");
-    background-size: 100%;
-  }
-}
-@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (min-resolution: 1.5dppx) {
-  .season-tickets::after {
-    background-image: url("../img/season-tickets/disks-tablet@2x.png");
-    width: 347px;
-    height: 444px;
+    background-image: -webkit-image-set(url("../img/season-tickets/disks-tablet.png") 1x, url("../img/season-tickets/disks-tablet@2x.png"));
+    background-image: image-set(url("../img/season-tickets/disks-tablet.png") 1x, url("../img/season-tickets/disks-tablet@2x.png"));
     background-size: 100%;
   }
 }
@@ -2714,6 +2701,12 @@ button,
 .advantages__item--simulators span:first-child {
   font-size: 74px;
   color: #ffffff;
+  margin: 15px 0;
+}
+@media (max-width: 1199px) {
+  .advantages__item--simulators span:first-child {
+    margin: 15px 19px;
+  }
 }
 .advantages__item--simulators span {
   font-size: 26px;
@@ -2721,8 +2714,6 @@ button,
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   color: #ffffff;
-  margin-top: 15px;
-  margin-bottom: 15px;
 }
 @media (max-width: 1199px) {
   .advantages__item--simulators span {

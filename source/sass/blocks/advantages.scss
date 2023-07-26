@@ -243,6 +243,11 @@
     span:first-child {
       font-size: 74px;
       color: $color-default-white;
+      margin: 15px 0;
+
+      @include vp-1199 {
+        margin: 15px 19px;
+      }
     }
 
     span {
@@ -251,8 +256,6 @@
       font-family: $ff-roboto;
       font-weight: 700;
       color: $color-default-white;
-      margin-top: 15px;
-      margin-bottom: 15px;
 
       @include vp-1199 {
         font-size: 22px;
