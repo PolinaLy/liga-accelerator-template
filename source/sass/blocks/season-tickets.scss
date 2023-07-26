@@ -21,30 +21,34 @@
     right: 0;
     bottom: -149px;
 
-    @include retina {
-      background-image: url("../img/season-tickets/disks-desktop@2x.png");
-      width: 287px;
-      height: 494px;
-      background-size: 100%;
-
-      @include vp-1199 {
-        background-image: url("../img/season-tickets/disks-tablet@2x.png");
-        width: 347px;
-        height: 444px;
-      }
-    }
-
     @include vp-1199 {
       width: 347px;
       height: 444px;
       bottom: -125px;
       background-image: url("../img/season-tickets/disks-tablet.png");
+      background-size: 100%;
+    }
 
-      // @include retina {
-      //   background-image: url("../img/season-tickets/disks-tablet@2x.png");
-      //   width: 347px;
-      //   height: 444px;
+    @include retina {
+      // background-image: url("../img/season-tickets/disks-desktop@2x.png");
+      // width: 287px;
+      // height: 494px;
+      // background-size: 100%;
+
+      // @include vp-1199 {
+        background-image: url("../img/season-tickets/disks-tablet@2x.png");
+        width: 347px;
+        height: 444px;
       // }
+    }
+
+    @media (min-width: $vp-1200) {
+      @include retina {
+        background-image: url("../img/season-tickets/disks-desktop@2x.png");
+        width: 287px;
+        height: 494px;
+        background-size: 100%;
+      }
     }
 
     @include vp-767 {
