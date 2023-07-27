@@ -795,38 +795,42 @@
 
       <section class="free-lesson-and-contacts">
         <div class="free-lesson" data-form-validate="data-form-validate" data-callback="base">
-          <h2>Бесплатное занятие</h2>
-          <form action="https://echo.htmlacademy.ru/" method="post">
-            <div class="custom-input" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Некорректно заполнено поле" data-required="data-required">
-              <input type="text" name="user-name-1" placeholder="Имя" required aria-label="Введите имя.">
-            </div>
-            <div class="custom-input" data-validate-type="phone" data-on-input-validate="data-on-input-validate" data-message-base="Поле обязательно к заполнению" data-message-extra="Некорректно заполнено поле" data-message-success="Поле заполнено верно" data-required="data-required">
-              <input type="tel" name="user-phone" placeholder="Телефон" required aria-label="Введите номер телефона.">
-            </div>
-            <button class="btn btn--form" type="submit">отправить</button>
-          </form>
+          <div class="free-lesson__container">
+            <h2>Бесплатное занятие</h2>
+            <form action="https://echo.htmlacademy.ru/" method="post">
+              <div class="custom-input" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Некорректно заполнено поле" data-required="data-required">
+                <input type="text" name="user-name-1" placeholder="Имя" required aria-label="Введите имя.">
+              </div>
+              <div class="custom-input" data-validate-type="phone" data-on-input-validate="data-on-input-validate" data-message-base="Поле обязательно к заполнению" data-message-extra="Некорректно заполнено поле" data-message-success="Поле заполнено верно" data-required="data-required">
+                <input type="tel" name="user-phone" placeholder="Телефон" required aria-label="Введите номер телефона.">
+              </div>
+              <button class="btn btn--form" type="submit">отправить</button>
+            </form>
+          </div>
         </div>
 
         <div class="contacts">
-          <h2>Контакты</h2>
-          <ul class="contacts__list">
-            <li class="contacts__item">
-              <h3>Адрес:</h3>
-              <p>г. Омск, ул. 60 лет Октября, 7</p>
-            </li>
-            <li class="contacts__item contacts__item--tel">
-              <h3>Телефон:</h3>
-              <a href="tel:88005555555">8-800-555-55-55</a>
-            </li>
-            <li class="contacts__item">
-              <h3>График работы:</h3>
-              <p>Пн-Вс: с 8:00 до 22:00</p>
-            </li>
-            <li class="contacts__item contacts__item--email">
-              <h3>Email:</h3>
-              <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
-            </li>
-          </ul>
+          <div class="contacts__container">
+            <h2>Контакты</h2>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <h3>Адрес:</h3>
+                <p>г. Омск, ул. 60 лет Октября, 7</p>
+              </li>
+              <li class="contacts__item contacts__item--tel">
+                <h3>Телефон:</h3>
+                <a href="tel:88005555555">8-800-555-55-55</a>
+              </li>
+              <li class="contacts__item">
+                <h3>График работы:</h3>
+                <p>Пн-Вс: с 8:00 до 22:00</p>
+              </li>
+              <li class="contacts__item contacts__item--email">
+                <h3>Email:</h3>
+                <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 

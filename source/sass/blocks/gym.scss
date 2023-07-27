@@ -207,7 +207,8 @@
   span {
     width: 72px;
     height: 72px;
-    background: var(--1, linear-gradient(240deg, #b80027 0%, #003d85 100%));
+    background: var(--1, linear-gradient(rgba(0, 61, 133, 1), rgba(184, 0, 39, 1)));
+    transform: rotate(240deg);
     border-radius: 50%;
 
     @include vp-1199 {

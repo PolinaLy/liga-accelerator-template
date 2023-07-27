@@ -79,6 +79,7 @@
     @include vp-1199 {
       grid-template-columns: 1fr;
       justify-items: center;
+      gap: 39px;
     }
 
     @include vp-767 {

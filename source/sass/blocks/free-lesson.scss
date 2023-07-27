@@ -103,7 +103,7 @@
       justify-content: space-between;
       flex-wrap: wrap;
       width: 61.46%;
-      max-width: 550px;
+      max-width: 480px;
       margin-left: 17.27%;
     }
   }
@@ -115,5 +115,14 @@
       width: 90.63%;
       margin: 0 auto;
     }
+  }
+}
+
+.free-lesson__container {
+  max-width: 580px;
+  margin-left: auto;
+
+  @include vp-1199 {
+    max-width: 100%;
   }
 }

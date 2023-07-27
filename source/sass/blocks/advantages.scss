@@ -90,6 +90,12 @@
     }
   }
 
+  &:nth-child(2) span:first-child {
+    background: linear-gradient(163deg, rgba(209, 10, 66, 1) 0, rgba(0, 65, 202, 1) 50%);
+    background-clip: text;
+    color: transparent;
+  }
+
   h3 {
     grid-column: 2/3;
     font-size: 22px;

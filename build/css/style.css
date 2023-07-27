@@ -1321,6 +1321,7 @@ button,
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     justify-items: center;
+    gap: 39px;
   }
 }
 @media (max-width: 767px) {
@@ -1888,7 +1889,10 @@ button,
 .gym__video-button span {
   width: 72px;
   height: 72px;
-  background: var(--1, linear-gradient(240deg, #b80027 0%, #003d85 100%));
+  background: var(--1, linear-gradient(rgb(0, 61, 133), rgb(184, 0, 39)));
+  -webkit-transform: rotate(240deg);
+      -ms-transform: rotate(240deg);
+          transform: rotate(240deg);
   border-radius: 50%;
 }
 @media (max-width: 1199px) {
@@ -2110,12 +2114,7 @@ button,
   .super-games__info p {
     font-size: 12px;
     line-height: 14px;
-    margin-top: -32px;
-  }
-}
-@media (max-width: 767px) {
-  .super-games__info p {
-    margin-top: -13px;
+    padding-bottom: 25px;
   }
 }
 @media (max-width: 1199px) {
@@ -2173,7 +2172,6 @@ button,
   }
   .super-games__image-wrapper img {
     width: 100%;
-    height: 292px;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -2300,6 +2298,16 @@ button,
 .trainers__swiper-img {
   position: relative;
 }
+@media (max-width: 1199px) {
+  .trainers__swiper-img {
+    max-width: 268px;
+  }
+}
+@media (max-width: 767px) {
+  .trainers__swiper-img {
+    max-width: inherit;
+  }
+}
 
 .trainers__swiper-img img {
   width: 100%;
@@ -2338,6 +2346,11 @@ button,
   background-color: #a2a2af;
   border: 1px solid #000000;
   border-radius: 20px;
+}
+@media (max-width: 1199px) {
+  .trainers__swiper-content {
+    max-width: 268px;
+  }
 }
 
 .trainers__swiper-text {
@@ -2507,7 +2520,7 @@ button,
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   line-height: 54px;
-  background: linear-gradient(160deg, rgb(209, 10, 66) 0%, rgb(0, 65, 202) 100%);
+  background: linear-gradient(160deg, rgb(209, 10, 66) 0%, rgb(0, 65, 202) 90%);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
@@ -2523,6 +2536,12 @@ button,
   .advantages__item:not(.advantages__item--simulators) span:first-child {
     line-height: 47px;
   }
+}
+.advantages__item:nth-child(2) span:first-child {
+  background: linear-gradient(163deg, rgb(209, 10, 66) 0, rgb(0, 65, 202) 50%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
 }
 .advantages__item h3 {
   -ms-grid-column: 2;
@@ -3376,7 +3395,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1366px;
   margin: 0 auto;
   border-top: 1px solid #74819c;
 }
@@ -3533,7 +3551,7 @@ button,
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 61.46%;
-    max-width: 550px;
+    max-width: 480px;
     margin-left: 17.27%;
   }
 }
@@ -3547,12 +3565,22 @@ button,
   }
 }
 
+.free-lesson__container {
+  max-width: 580px;
+  margin-left: auto;
+}
+@media (max-width: 1199px) {
+  .free-lesson__container {
+    max-width: 100%;
+  }
+}
+
 .contacts {
   width: 50vw;
-  padding: 56px 0 60px 9%;
+  padding: 56px 0 60px 120px;
 }
 .contacts h2 {
-  margin: 0 0 41px;
+  margin: 0 0 38px;
 }
 @media (max-width: 1199px) {
   .contacts h2 {
@@ -3578,6 +3606,15 @@ button,
   }
 }
 
+.contacts__container {
+  max-width: 683px;
+}
+@media (max-width: 1199px) {
+  .contacts__container {
+    max-width: 100%;
+  }
+}
+
 .contacts__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3586,11 +3623,13 @@ button,
       flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  padding-left: 4px;
 }
 @media (max-width: 1199px) {
   .contacts__list {
     width: 65.2%;
     margin: 0 auto;
+    padding: 0;
   }
 }
 @media (max-width: 767px) {

@@ -1,9 +1,9 @@
 .contacts {
   width: 50vw;
-  padding: 56px 0 60px 9%;
+  padding: 56px 0 60px 120px;
 
   h2 {
-    margin: 0 0 41px;
+    margin: 0 0 38px;
 
     @include vp-1199 {
       width: 65.46%;
@@ -26,15 +26,25 @@
   }
 }
 
+.contacts__container {
+  max-width: 683px;
+
+  @include vp-1199 {
+    max-width: 100%;
+  }
+}
+
 .contacts__list {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  padding-left: 4px;
 
   @include vp-1199 {
     width: 65.2%;
     margin: 0 auto;
+    padding: 0;
   }
 
   @include vp-767 {
